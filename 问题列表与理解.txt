@@ -1,0 +1,32 @@
+YOLO_Fastest模型：
+1、anchor_box数量？   num_anchor = io_params["num_anchors"] * self.num_cls  为什么anchor_box数量要乘以类别数？ 每类别对应一个anchor_box? 已修改，去掉乘号
+2、网络结构：为什么有两个输出？  对应多尺度吗，不同层次的检测对于小目标更好。
+
+DetectDataset：
+1、label （64，6）为什么每个目标要多一个值（255）？ 64个目标填不满，剩下大量的0怎么处理？多一个255标记无用项，用来跳过那些不存在的目标
+
+YOLOv3Loss：
+1、为什么只用shape筛选掉anchor box？
+get_target是根据target和anchor_boxes的IOU值来初步筛选，哪些anchor_boxes里可能含有目标。筛选掉一部分尺度明显不符合的。
+针对的是目标所在位置对应特征图像素预测出来的那几个anchor box。（注意修改的都是由【gi,gj】指定的元素）
+
+2、为什么用BCEloss？
+3、为什么给 w,h,x,y都要加上加权系数？论文无对应。
+4、YOLOLossV3.forward()中 target不存在的处理方式是什么？用于detect
+6、train.py中loss最后的加和处理怎么操作的？√
+
+Detect:
+1、使用loss类计算预测检验框的过程中，一些变量的shape不明确.√
+2、为什么_sacle要乘2？
+3、scale_coords函数有bug
+
+general   Non_maxium supression()
+1、  max_detections = torch.cat(max_detections).data  这行作用是什么？
+
+train:
+1、学习率调整的原理是什么？
+
+改进：1、应该在最前面屏蔽其它GPU,只保留要用那个。这样可以直接cuda,不同传递device参数
+          2、进行图片预处理，增强对比度。突出船只目标
+          3、通过聚类学习得到专用的anchor_box
+          4、降低图像分辨率

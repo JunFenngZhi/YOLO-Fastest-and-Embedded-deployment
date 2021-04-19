@@ -1,0 +1,501 @@
+2021-04-15 15:47:36,924——image_name:Cloud_2m_4517.jpg, time:44.92ms
+2021-04-15 15:47:36,956——image_name:Cloud_2m_4509.jpg ->no results, time:31.90ms
+2021-04-15 15:47:36,993——image_name:Cloud_2m_4697.jpg, time:35.82ms
+2021-04-15 15:47:37,030——image_name:noCloud_2m_4338.jpg ->no results, time:37.29ms
+2021-04-15 15:47:37,072——image_name:noCloud_2m_4405.jpg, time:41.06ms
+2021-04-15 15:47:37,107——image_name:Cloud_2m_4712.jpg, time:33.79ms
+2021-04-15 15:47:37,140——image_name:noCloud_2m_4521.jpg, time:32.95ms
+2021-04-15 15:47:37,178——image_name:Cloud_2m_4706.jpg, time:37.22ms
+2021-04-15 15:47:37,212——image_name:Cloud_2m_4545.jpg, time:34.49ms
+2021-04-15 15:47:37,246——image_name:Cloud_2m_4607.jpg, time:33.60ms
+2021-04-15 15:47:37,281——image_name:Cloud_2m_4533.jpg, time:34.70ms
+2021-04-15 15:47:37,313——image_name:noCloud_2m_4544.jpg, time:31.92ms
+2021-04-15 15:47:37,345——image_name:Cloud_2m_4588.jpg ->no results, time:31.51ms
+2021-04-15 15:47:37,377——image_name:noCloud_2m_4317.jpg, time:31.69ms
+2021-04-15 15:47:37,409——image_name:Cloud_2m_4502.jpg ->no results, time:31.17ms
+2021-04-15 15:47:37,444——image_name:noCloud_2m_4475.jpg, time:34.53ms
+2021-04-15 15:47:37,477——image_name:Cloud_2m_4565.jpg, time:32.71ms
+2021-04-15 15:47:37,509——image_name:noCloud_2m_4329.jpg, time:31.86ms
+2021-04-15 15:47:37,539——image_name:noCloud_2m_4376.jpg, time:30.28ms
+2021-04-15 15:47:37,570——image_name:noCloud_2m_4462.jpg, time:29.81ms
+2021-04-15 15:47:37,600——image_name:Cloud_2m_4551.jpg, time:29.66ms
+2021-04-15 15:47:37,628——image_name:noCloud_2m_4539.jpg ->no results, time:28.23ms
+2021-04-15 15:47:37,661——image_name:Cloud_2m_4728.jpg, time:32.15ms
+2021-04-15 15:47:37,696——image_name:Cloud_2m_4718.jpg, time:34.27ms
+2021-04-15 15:47:37,726——image_name:noCloud_2m_4543.jpg, time:30.02ms
+2021-04-15 15:47:37,753——image_name:Cloud_2m_4589.jpg ->no results, time:26.60ms
+2021-04-15 15:47:37,778——image_name:Cloud_2m_4652.jpg ->no results, time:24.74ms
+2021-04-15 15:47:37,804——image_name:Cloud_2m_4620.jpg, time:26.29ms
+2021-04-15 15:47:37,831——image_name:Cloud_2m_4570.jpg, time:26.27ms
+2021-04-15 15:47:37,855——image_name:noCloud_2m_4529.jpg, time:23.73ms
+2021-04-15 15:47:37,883——image_name:noCloud_2m_4384.jpg, time:27.89ms
+2021-04-15 15:47:37,910——image_name:Cloud_2m_4654.jpg, time:27.07ms
+2021-04-15 15:47:37,937——image_name:noCloud_2m_4359.jpg, time:26.59ms
+2021-04-15 15:47:37,965——image_name:Cloud_2m_4670.jpg, time:27.41ms
+2021-04-15 15:47:37,994——image_name:Cloud_2m_4690.jpg, time:28.68ms
+2021-04-15 15:47:38,022——image_name:Cloud_2m_4608.jpg, time:28.29ms
+2021-04-15 15:47:38,053——image_name:Cloud_2m_4650.jpg, time:30.01ms
+2021-04-15 15:47:38,091——image_name:Cloud_2m_4510.jpg, time:37.91ms
+2021-04-15 15:47:38,123——image_name:noCloud_2m_4505.jpg, time:32.00ms
+2021-04-15 15:47:38,154——image_name:Cloud_2m_4710.jpg, time:30.44ms
+2021-04-15 15:47:38,184——image_name:Cloud_2m_4573.jpg, time:29.79ms
+2021-04-15 15:47:38,216——image_name:noCloud_2m_4453.jpg, time:31.11ms
+2021-04-15 15:47:38,245——image_name:noCloud_2m_4383.jpg, time:28.53ms
+2021-04-15 15:47:38,275——image_name:Cloud_2m_4598.jpg, time:29.24ms
+2021-04-15 15:47:38,305——image_name:noCloud_2m_4343.jpg, time:29.94ms
+2021-04-15 15:47:38,335——image_name:noCloud_2m_4438.jpg, time:30.26ms
+2021-04-15 15:47:38,363——image_name:Cloud_2m_4657.jpg ->no results, time:26.42ms
+2021-04-15 15:47:38,391——image_name:noCloud_2m_4307.jpg, time:28.27ms
+2021-04-15 15:47:38,418——image_name:Cloud_2m_4655.jpg ->no results, time:26.50ms
+2021-04-15 15:47:38,445——image_name:Cloud_2m_4667.jpg ->no results, time:27.03ms
+2021-04-15 15:47:38,475——image_name:noCloud_2m_4467.jpg, time:29.86ms
+2021-04-15 15:47:38,505——image_name:noCloud_2m_4406.jpg, time:28.30ms
+2021-04-15 15:47:38,535——image_name:Cloud_2m_4602.jpg, time:30.50ms
+2021-04-15 15:47:38,568——image_name:noCloud_2m_4439.jpg ->no results, time:32.35ms
+2021-04-15 15:47:38,601——image_name:Cloud_2m_4506.jpg, time:32.62ms
+2021-04-15 15:47:38,633——image_name:noCloud_2m_4446.jpg, time:32.21ms
+2021-04-15 15:47:38,666——image_name:noCloud_2m_4308.jpg, time:31.98ms
+2021-04-15 15:47:38,696——image_name:noCloud_2m_4512.jpg ->no results, time:29.59ms
+2021-04-15 15:47:38,726——image_name:noCloud_2m_4447.jpg, time:29.36ms
+2021-04-15 15:47:38,754——image_name:noCloud_2m_4382.jpg, time:28.61ms
+2021-04-15 15:47:38,782——image_name:noCloud_2m_4459.jpg, time:27.75ms
+2021-04-15 15:47:38,812——image_name:noCloud_2m_4485.jpg, time:29.15ms
+2021-04-15 15:47:38,842——image_name:noCloud_2m_4349.jpg, time:30.30ms
+2021-04-15 15:47:38,876——image_name:noCloud_2m_4419.jpg, time:33.24ms
+2021-04-15 15:47:38,907——image_name:Cloud_2m_4511.jpg, time:31.24ms
+2021-04-15 15:47:38,938——image_name:noCloud_2m_4328.jpg ->no results, time:29.88ms
+2021-04-15 15:47:38,968——image_name:Cloud_2m_4726.jpg ->no results, time:30.60ms
+2021-04-15 15:47:38,997——image_name:Cloud_2m_4688.jpg ->no results, time:27.92ms
+2021-04-15 15:47:39,026——image_name:Cloud_2m_4745.jpg ->no results, time:29.48ms
+2021-04-15 15:47:39,054——image_name:Cloud_2m_4630.jpg ->no results, time:27.13ms
+2021-04-15 15:47:39,083——image_name:Cloud_2m_4746.jpg, time:28.70ms
+2021-04-15 15:47:39,113——image_name:noCloud_2m_4323.jpg, time:29.84ms
+2021-04-15 15:47:39,142——image_name:noCloud_2m_4362.jpg ->no results, time:28.85ms
+2021-04-15 15:47:39,175——image_name:noCloud_2m_4305.jpg, time:32.02ms
+2021-04-15 15:47:39,205——image_name:Cloud_2m_4729.jpg ->no results, time:30.30ms
+2021-04-15 15:47:39,235——image_name:Cloud_2m_4553.jpg, time:29.96ms
+2021-04-15 15:47:39,267——image_name:noCloud_2m_4440.jpg, time:31.25ms
+2021-04-15 15:47:39,298——image_name:Cloud_2m_4535.jpg ->no results, time:30.45ms
+2021-04-15 15:47:39,326——image_name:Cloud_2m_4538.jpg ->no results, time:27.90ms
+2021-04-15 15:47:39,357——image_name:noCloud_2m_4369.jpg, time:30.26ms
+2021-04-15 15:47:39,386——image_name:noCloud_2m_4432.jpg ->no results, time:28.61ms
+2021-04-15 15:47:39,414——image_name:Cloud_2m_4734.jpg ->no results, time:27.67ms
+2021-04-15 15:47:39,444——image_name:Cloud_2m_4642.jpg ->no results, time:30.14ms
+2021-04-15 15:47:39,476——image_name:Cloud_2m_4638.jpg, time:31.14ms
+2021-04-15 15:47:39,510——image_name:noCloud_2m_4523.jpg, time:33.70ms
+2021-04-15 15:47:39,544——image_name:Cloud_2m_4681.jpg, time:34.42ms
+2021-04-15 15:47:39,577——image_name:noCloud_2m_4480.jpg, time:32.68ms
+2021-04-15 15:47:39,608——image_name:noCloud_2m_4366.jpg ->no results, time:30.68ms
+2021-04-15 15:47:39,644——image_name:noCloud_2m_4491.jpg, time:35.33ms
+2021-04-15 15:47:39,674——image_name:Cloud_2m_4676.jpg ->no results, time:29.40ms
+2021-04-15 15:47:39,711——image_name:Cloud_2m_4527.jpg, time:36.27ms
+2021-04-15 15:47:39,745——image_name:Cloud_2m_4615.jpg, time:33.70ms
+2021-04-15 15:47:39,784——image_name:noCloud_2m_4444.jpg, time:38.00ms
+2021-04-15 15:47:39,819——image_name:noCloud_2m_4402.jpg, time:34.65ms
+2021-04-15 15:47:39,855——image_name:noCloud_2m_4408.jpg, time:35.67ms
+2021-04-15 15:47:39,890——image_name:noCloud_2m_4545.jpg, time:35.26ms
+2021-04-15 15:47:39,925——image_name:noCloud_2m_4340.jpg, time:34.68ms
+2021-04-15 15:47:39,957——image_name:Cloud_2m_4619.jpg, time:31.42ms
+2021-04-15 15:47:39,989——image_name:noCloud_2m_4508.jpg, time:31.64ms
+2021-04-15 15:47:40,020——image_name:Cloud_2m_4549.jpg, time:30.76ms
+2021-04-15 15:47:40,050——image_name:Cloud_2m_4700.jpg ->no results, time:30.16ms
+2021-04-15 15:47:40,085——image_name:Cloud_2m_4536.jpg ->no results, time:34.70ms
+2021-04-15 15:47:40,120——image_name:noCloud_2m_4403.jpg, time:34.51ms
+2021-04-15 15:47:40,156——image_name:noCloud_2m_4381.jpg, time:34.96ms
+2021-04-15 15:47:40,192——image_name:noCloud_2m_4498.jpg, time:36.03ms
+2021-04-15 15:47:40,225——image_name:Cloud_2m_4505.jpg, time:32.87ms
+2021-04-15 15:47:40,252——image_name:Cloud_2m_4534.jpg ->no results, time:27.01ms
+2021-04-15 15:47:40,287——image_name:noCloud_2m_4407.jpg, time:34.76ms
+2021-04-15 15:47:40,321——image_name:noCloud_2m_4494.jpg, time:33.02ms
+2021-04-15 15:47:40,353——image_name:Cloud_2m_4515.jpg, time:31.60ms
+2021-04-15 15:47:40,385——image_name:Cloud_2m_4584.jpg, time:32.31ms
+2021-04-15 15:47:40,418——image_name:Cloud_2m_4640.jpg, time:32.86ms
+2021-04-15 15:47:40,451——image_name:noCloud_2m_4367.jpg, time:32.26ms
+2021-04-15 15:47:40,482——image_name:Cloud_2m_4600.jpg ->no results, time:30.76ms
+2021-04-15 15:47:40,511——image_name:noCloud_2m_4309.jpg ->no results, time:28.81ms
+2021-04-15 15:47:40,546——image_name:Cloud_2m_4732.jpg, time:34.70ms
+2021-04-15 15:47:40,578——image_name:Cloud_2m_4680.jpg ->no results, time:31.63ms
+2021-04-15 15:47:40,615——image_name:noCloud_2m_4500.jpg, time:37.09ms
+2021-04-15 15:47:40,647——image_name:Cloud_2m_4694.jpg ->no results, time:31.83ms
+2021-04-15 15:47:40,687——image_name:Cloud_2m_4691.jpg, time:39.74ms
+2021-04-15 15:47:40,723——image_name:Cloud_2m_4508.jpg ->no results, time:35.60ms
+2021-04-15 15:47:40,758——image_name:noCloud_2m_4464.jpg, time:34.74ms
+2021-04-15 15:47:40,790——image_name:Cloud_2m_4698.jpg, time:31.60ms
+2021-04-15 15:47:40,826——image_name:noCloud_2m_4470.jpg, time:35.70ms
+2021-04-15 15:47:40,860——image_name:Cloud_2m_4577.jpg, time:33.34ms
+2021-04-15 15:47:40,895——image_name:noCloud_2m_4506.jpg, time:35.26ms
+2021-04-15 15:47:40,935——image_name:noCloud_2m_4511.jpg, time:39.53ms
+2021-04-15 15:47:40,973——image_name:Cloud_2m_4606.jpg, time:37.01ms
+2021-04-15 15:47:41,010——image_name:noCloud_2m_4416.jpg, time:37.18ms
+2021-04-15 15:47:41,046——image_name:noCloud_2m_4315.jpg, time:35.62ms
+2021-04-15 15:47:41,084——image_name:Cloud_2m_4738.jpg, time:37.60ms
+2021-04-15 15:47:41,129——image_name:Cloud_2m_4625.jpg, time:45.01ms
+2021-04-15 15:47:41,165——image_name:Cloud_2m_4504.jpg ->no results, time:34.76ms
+2021-04-15 15:47:41,198——image_name:Cloud_2m_4564.jpg ->no results, time:32.69ms
+2021-04-15 15:47:41,233——image_name:noCloud_2m_4490.jpg, time:35.04ms
+2021-04-15 15:47:41,271——image_name:noCloud_2m_4497.jpg, time:38.14ms
+2021-04-15 15:47:41,310——image_name:noCloud_2m_4357.jpg, time:38.12ms
+2021-04-15 15:47:41,346——image_name:noCloud_2m_4460.jpg, time:36.07ms
+2021-04-15 15:47:41,380——image_name:Cloud_2m_4605.jpg ->no results, time:33.02ms
+2021-04-15 15:47:41,413——image_name:Cloud_2m_4542.jpg ->no results, time:33.16ms
+2021-04-15 15:47:41,448——image_name:Cloud_2m_4539.jpg ->no results, time:34.55ms
+2021-04-15 15:47:41,486——image_name:Cloud_2m_4561.jpg, time:37.30ms
+2021-04-15 15:47:41,524——image_name:Cloud_2m_4715.jpg, time:37.76ms
+2021-04-15 15:47:41,559——image_name:noCloud_2m_4302.jpg, time:35.08ms
+2021-04-15 15:47:41,596——image_name:Cloud_2m_4705.jpg, time:35.84ms
+2021-04-15 15:47:41,634——image_name:noCloud_2m_4541.jpg, time:37.94ms
+2021-04-15 15:47:41,674——image_name:noCloud_2m_4397.jpg, time:39.46ms
+2021-04-15 15:47:41,712——image_name:noCloud_2m_4481.jpg, time:36.81ms
+2021-04-15 15:47:41,750——image_name:Cloud_2m_4576.jpg, time:38.47ms
+2021-04-15 15:47:41,786——image_name:Cloud_2m_4648.jpg ->no results, time:35.00ms
+2021-04-15 15:47:41,823——image_name:noCloud_2m_4351.jpg, time:37.28ms
+2021-04-15 15:47:41,859——image_name:noCloud_2m_4354.jpg ->no results, time:35.56ms
+2021-04-15 15:47:41,895——image_name:Cloud_2m_4713.jpg ->no results, time:35.32ms
+2021-04-15 15:47:41,935——image_name:Cloud_2m_4541.jpg, time:39.54ms
+2021-04-15 15:47:41,974——image_name:Cloud_2m_4633.jpg, time:39.44ms
+2021-04-15 15:47:42,009——image_name:noCloud_2m_4322.jpg ->no results, time:34.29ms
+2021-04-15 15:47:42,045——image_name:Cloud_2m_4593.jpg, time:35.17ms
+2021-04-15 15:47:42,077——image_name:noCloud_2m_4358.jpg, time:32.09ms
+2021-04-15 15:47:42,111——image_name:Cloud_2m_4687.jpg, time:34.27ms
+2021-04-15 15:47:42,146——image_name:noCloud_2m_4392.jpg, time:33.79ms
+2021-04-15 15:47:42,181——image_name:Cloud_2m_4603.jpg, time:35.30ms
+2021-04-15 15:47:42,216——image_name:noCloud_2m_4455.jpg, time:34.58ms
+2021-04-15 15:47:42,247——image_name:Cloud_2m_4660.jpg, time:30.95ms
+2021-04-15 15:47:42,283——image_name:Cloud_2m_4614.jpg, time:34.86ms
+2021-04-15 15:47:42,317——image_name:Cloud_2m_4696.jpg, time:33.83ms
+2021-04-15 15:47:42,351——image_name:Cloud_2m_4556.jpg, time:34.27ms
+2021-04-15 15:47:42,382——image_name:noCloud_2m_4399.jpg ->no results, time:30.76ms
+2021-04-15 15:47:42,416——image_name:noCloud_2m_4473.jpg, time:33.09ms
+2021-04-15 15:47:42,454——image_name:noCloud_2m_4373.jpg, time:37.77ms
+2021-04-15 15:47:42,486——image_name:Cloud_2m_4661.jpg ->no results, time:31.76ms
+2021-04-15 15:47:42,520——image_name:Cloud_2m_4550.jpg ->no results, time:34.16ms
+2021-04-15 15:47:42,555——image_name:noCloud_2m_4507.jpg ->no results, time:34.73ms
+2021-04-15 15:47:42,593——image_name:noCloud_2m_4394.jpg, time:37.47ms
+2021-04-15 15:47:42,634——image_name:noCloud_2m_4312.jpg, time:40.18ms
+2021-04-15 15:47:42,673——image_name:Cloud_2m_4555.jpg, time:39.19ms
+2021-04-15 15:47:42,710——image_name:noCloud_2m_4443.jpg, time:36.52ms
+2021-04-15 15:47:42,746——image_name:Cloud_2m_4626.jpg, time:35.52ms
+2021-04-15 15:47:42,782——image_name:noCloud_2m_4335.jpg, time:35.47ms
+2021-04-15 15:47:42,815——image_name:Cloud_2m_4530.jpg ->no results, time:32.53ms
+2021-04-15 15:47:42,848——image_name:Cloud_2m_4658.jpg ->no results, time:32.69ms
+2021-04-15 15:47:42,880——image_name:Cloud_2m_4559.jpg ->no results, time:32.17ms
+2021-04-15 15:47:42,916——image_name:Cloud_2m_4537.jpg, time:35.83ms
+2021-04-15 15:47:42,950——image_name:noCloud_2m_4478.jpg ->no results, time:34.11ms
+2021-04-15 15:47:42,983——image_name:Cloud_2m_4613.jpg ->no results, time:31.77ms
+2021-04-15 15:47:43,017——image_name:noCloud_2m_4510.jpg, time:33.68ms
+2021-04-15 15:47:43,049——image_name:Cloud_2m_4624.jpg ->no results, time:32.40ms
+2021-04-15 15:47:43,087——image_name:Cloud_2m_4709.jpg, time:37.75ms
+2021-04-15 15:47:43,122——image_name:Cloud_2m_4716.jpg, time:34.69ms
+2021-04-15 15:47:43,157——image_name:Cloud_2m_4741.jpg, time:34.45ms
+2021-04-15 15:47:43,191——image_name:noCloud_2m_4378.jpg ->no results, time:33.93ms
+2021-04-15 15:47:43,223——image_name:noCloud_2m_4536.jpg, time:31.53ms
+2021-04-15 15:47:43,257——image_name:noCloud_2m_4429.jpg, time:34.16ms
+2021-04-15 15:47:43,291——image_name:Cloud_2m_4546.jpg, time:33.52ms
+2021-04-15 15:47:43,331——image_name:Cloud_2m_4609.jpg, time:39.13ms
+2021-04-15 15:47:43,363——image_name:noCloud_2m_4409.jpg ->no results, time:31.59ms
+2021-04-15 15:47:43,397——image_name:noCloud_2m_4513.jpg, time:33.84ms
+2021-04-15 15:47:43,428——image_name:Cloud_2m_4684.jpg ->no results, time:31.25ms
+2021-04-15 15:47:43,464——image_name:noCloud_2m_4484.jpg, time:35.47ms
+2021-04-15 15:47:43,498——image_name:noCloud_2m_4503.jpg ->no results, time:33.48ms
+2021-04-15 15:47:43,532——image_name:noCloud_2m_4531.jpg, time:33.90ms
+2021-04-15 15:47:43,570——image_name:Cloud_2m_4599.jpg, time:37.91ms
+2021-04-15 15:47:43,606——image_name:noCloud_2m_4468.jpg, time:35.88ms
+2021-04-15 15:47:43,643——image_name:Cloud_2m_4516.jpg, time:36.27ms
+2021-04-15 15:47:43,678——image_name:noCloud_2m_4417.jpg, time:34.81ms
+2021-04-15 15:47:43,710——image_name:Cloud_2m_4518.jpg ->no results, time:31.68ms
+2021-04-15 15:47:43,746——image_name:Cloud_2m_4669.jpg, time:35.11ms
+2021-04-15 15:47:43,780——image_name:Cloud_2m_4644.jpg, time:34.04ms
+2021-04-15 15:47:43,819——image_name:noCloud_2m_4377.jpg, time:38.51ms
+2021-04-15 15:47:43,854——image_name:noCloud_2m_4319.jpg, time:35.33ms
+2021-04-15 15:47:43,889——image_name:Cloud_2m_4749.jpg, time:34.29ms
+2021-04-15 15:47:43,923——image_name:Cloud_2m_4637.jpg, time:34.01ms
+2021-04-15 15:47:43,958——image_name:noCloud_2m_4549.jpg, time:34.09ms
+2021-04-15 15:47:43,991——image_name:noCloud_2m_4346.jpg, time:33.09ms
+2021-04-15 15:47:44,026——image_name:noCloud_2m_4339.jpg, time:35.12ms
+2021-04-15 15:47:44,063——image_name:noCloud_2m_4502.jpg, time:36.70ms
+2021-04-15 15:47:44,097——image_name:noCloud_2m_4420.jpg ->no results, time:33.02ms
+2021-04-15 15:47:44,133——image_name:Cloud_2m_4717.jpg ->no results, time:35.53ms
+2021-04-15 15:47:44,167——image_name:noCloud_2m_4301.jpg, time:34.50ms
+2021-04-15 15:47:44,200——image_name:Cloud_2m_4514.jpg, time:32.61ms
+2021-04-15 15:47:44,235——image_name:noCloud_2m_4451.jpg, time:34.55ms
+2021-04-15 15:47:44,271——image_name:noCloud_2m_4314.jpg, time:35.94ms
+2021-04-15 15:47:44,304——image_name:Cloud_2m_4512.jpg ->no results, time:32.44ms
+2021-04-15 15:47:44,335——image_name:noCloud_2m_4525.jpg ->no results, time:31.01ms
+2021-04-15 15:47:44,371——image_name:noCloud_2m_4327.jpg, time:35.72ms
+2021-04-15 15:47:44,410——image_name:noCloud_2m_4316.jpg, time:37.74ms
+2021-04-15 15:47:44,447——image_name:noCloud_2m_4423.jpg, time:37.58ms
+2021-04-15 15:47:44,485——image_name:Cloud_2m_4618.jpg ->no results, time:36.86ms
+2021-04-15 15:47:44,519——image_name:Cloud_2m_4554.jpg ->no results, time:33.80ms
+2021-04-15 15:47:44,556——image_name:Cloud_2m_4569.jpg, time:37.19ms
+2021-04-15 15:47:44,599——image_name:noCloud_2m_4374.jpg, time:42.69ms
+2021-04-15 15:47:44,643——image_name:Cloud_2m_4635.jpg, time:43.75ms
+2021-04-15 15:47:44,686——image_name:noCloud_2m_4313.jpg ->no results, time:42.29ms
+2021-04-15 15:47:44,729——image_name:Cloud_2m_4647.jpg, time:43.12ms
+2021-04-15 15:47:44,770——image_name:noCloud_2m_4421.jpg, time:40.07ms
+2021-04-15 15:47:44,804——image_name:noCloud_2m_4488.jpg ->no results, time:33.57ms
+2021-04-15 15:47:44,841——image_name:Cloud_2m_4720.jpg, time:36.50ms
+2021-04-15 15:47:44,875——image_name:noCloud_2m_4435.jpg, time:33.62ms
+2021-04-15 15:47:44,908——image_name:noCloud_2m_4380.jpg, time:32.97ms
+2021-04-15 15:47:44,940——image_name:Cloud_2m_4645.jpg, time:31.27ms
+2021-04-15 15:47:44,974——image_name:Cloud_2m_4591.jpg, time:33.96ms
+2021-04-15 15:47:45,003——image_name:noCloud_2m_4504.jpg, time:28.66ms
+2021-04-15 15:47:45,032——image_name:Cloud_2m_4547.jpg ->no results, time:28.26ms
+2021-04-15 15:47:45,064——image_name:Cloud_2m_4540.jpg, time:32.26ms
+2021-04-15 15:47:45,099——image_name:Cloud_2m_4525.jpg, time:34.81ms
+2021-04-15 15:47:45,131——image_name:noCloud_2m_4433.jpg, time:31.07ms
+2021-04-15 15:47:45,164——image_name:noCloud_2m_4341.jpg, time:32.76ms
+2021-04-15 15:47:45,194——image_name:noCloud_2m_4336.jpg, time:30.25ms
+2021-04-15 15:47:45,229——image_name:noCloud_2m_4515.jpg, time:34.64ms
+2021-04-15 15:47:45,262——image_name:noCloud_2m_4379.jpg, time:33.04ms
+2021-04-15 15:47:45,292——image_name:Cloud_2m_4592.jpg ->no results, time:29.75ms
+2021-04-15 15:47:45,323——image_name:noCloud_2m_4457.jpg ->no results, time:30.64ms
+2021-04-15 15:47:45,357——image_name:noCloud_2m_4331.jpg, time:33.34ms
+2021-04-15 15:47:45,390——image_name:noCloud_2m_4398.jpg, time:33.13ms
+2021-04-15 15:47:45,421——image_name:noCloud_2m_4410.jpg ->no results, time:30.37ms
+2021-04-15 15:47:45,452——image_name:Cloud_2m_4643.jpg ->no results, time:30.74ms
+2021-04-15 15:47:45,485——image_name:noCloud_2m_4449.jpg, time:32.83ms
+2021-04-15 15:47:45,516——image_name:noCloud_2m_4527.jpg ->no results, time:30.37ms
+2021-04-15 15:47:45,547——image_name:noCloud_2m_4461.jpg, time:31.49ms
+2021-04-15 15:47:45,580——image_name:Cloud_2m_4668.jpg, time:32.37ms
+2021-04-15 15:47:45,613——image_name:noCloud_2m_4337.jpg, time:32.34ms
+2021-04-15 15:47:45,641——image_name:Cloud_2m_4578.jpg ->no results, time:27.76ms
+2021-04-15 15:47:45,671——image_name:noCloud_2m_4422.jpg, time:30.08ms
+2021-04-15 15:47:45,699——image_name:Cloud_2m_4585.jpg ->no results, time:28.18ms
+2021-04-15 15:47:45,734——image_name:noCloud_2m_4364.jpg, time:34.73ms
+2021-04-15 15:47:45,765——image_name:Cloud_2m_4743.jpg ->no results, time:29.91ms
+2021-04-15 15:47:45,797——image_name:Cloud_2m_4702.jpg ->no results, time:31.78ms
+2021-04-15 15:47:45,831——image_name:noCloud_2m_4487.jpg, time:34.15ms
+2021-04-15 15:47:45,867——image_name:noCloud_2m_4303.jpg, time:35.82ms
+2021-04-15 15:47:45,901——image_name:noCloud_2m_4482.jpg, time:33.86ms
+2021-04-15 15:47:45,939——image_name:Cloud_2m_4532.jpg, time:37.30ms
+2021-04-15 15:47:45,973——image_name:noCloud_2m_4424.jpg ->no results, time:33.93ms
+2021-04-15 15:47:46,005——image_name:Cloud_2m_4692.jpg ->no results, time:31.91ms
+2021-04-15 15:47:46,040——image_name:noCloud_2m_4452.jpg, time:34.47ms
+2021-04-15 15:47:46,078——image_name:Cloud_2m_4627.jpg, time:37.43ms
+2021-04-15 15:47:46,115——image_name:Cloud_2m_4558.jpg, time:36.60ms
+2021-04-15 15:47:46,153——image_name:noCloud_2m_4530.jpg, time:37.42ms
+2021-04-15 15:47:46,192——image_name:noCloud_2m_4517.jpg, time:38.95ms
+2021-04-15 15:47:46,231——image_name:noCloud_2m_4437.jpg, time:38.41ms
+2021-04-15 15:47:46,267——image_name:noCloud_2m_4372.jpg, time:35.80ms
+2021-04-15 15:47:46,304——image_name:Cloud_2m_4731.jpg, time:37.05ms
+2021-04-15 15:47:46,343——image_name:noCloud_2m_4396.jpg, time:38.29ms
+2021-04-15 15:47:46,381——image_name:Cloud_2m_4736.jpg, time:37.77ms
+2021-04-15 15:47:46,420——image_name:Cloud_2m_4649.jpg, time:38.98ms
+2021-04-15 15:47:46,455——image_name:noCloud_2m_4310.jpg, time:34.52ms
+2021-04-15 15:47:46,486——image_name:noCloud_2m_4471.jpg ->no results, time:30.75ms
+2021-04-15 15:47:46,512——image_name:Cloud_2m_4526.jpg ->no results, time:26.12ms
+2021-04-15 15:47:46,542——image_name:Cloud_2m_4529.jpg, time:29.43ms
+2021-04-15 15:47:46,577——image_name:noCloud_2m_4344.jpg, time:34.85ms
+2021-04-15 15:47:46,614——image_name:Cloud_2m_4722.jpg, time:37.15ms
+2021-04-15 15:47:46,654——image_name:noCloud_2m_4426.jpg, time:39.58ms
+2021-04-15 15:47:46,691——image_name:Cloud_2m_4583.jpg, time:37.17ms
+2021-04-15 15:47:46,730——image_name:noCloud_2m_4425.jpg, time:37.51ms
+2021-04-15 15:47:46,768——image_name:Cloud_2m_4744.jpg, time:38.10ms
+2021-04-15 15:47:46,802——image_name:Cloud_2m_4611.jpg ->no results, time:34.09ms
+2021-04-15 15:47:46,840——image_name:Cloud_2m_4513.jpg, time:37.03ms
+2021-04-15 15:47:46,872——image_name:Cloud_2m_4714.jpg ->no results, time:32.01ms
+2021-04-15 15:47:46,909——image_name:Cloud_2m_4560.jpg, time:36.94ms
+2021-04-15 15:47:46,942——image_name:Cloud_2m_4617.jpg ->no results, time:32.62ms
+2021-04-15 15:47:46,978——image_name:noCloud_2m_4528.jpg, time:35.91ms
+2021-04-15 15:47:47,014——image_name:noCloud_2m_4415.jpg, time:35.67ms
+2021-04-15 15:47:47,050——image_name:Cloud_2m_4520.jpg, time:35.02ms
+2021-04-15 15:47:47,083——image_name:noCloud_2m_4518.jpg, time:32.82ms
+2021-04-15 15:47:47,114——image_name:noCloud_2m_4547.jpg ->no results, time:31.07ms
+2021-04-15 15:47:47,149——image_name:Cloud_2m_4739.jpg, time:35.07ms
+2021-04-15 15:47:47,189——image_name:noCloud_2m_4428.jpg, time:39.42ms
+2021-04-15 15:47:47,228——image_name:noCloud_2m_4492.jpg, time:38.69ms
+2021-04-15 15:47:47,265——image_name:Cloud_2m_4682.jpg, time:37.09ms
+2021-04-15 15:47:47,304——image_name:noCloud_2m_4427.jpg, time:38.72ms
+2021-04-15 15:47:47,336——image_name:noCloud_2m_4537.jpg ->no results, time:31.54ms
+2021-04-15 15:47:47,366——image_name:Cloud_2m_4683.jpg, time:29.92ms
+2021-04-15 15:47:47,399——image_name:Cloud_2m_4524.jpg ->no results, time:31.88ms
+2021-04-15 15:47:47,436——image_name:noCloud_2m_4442.jpg, time:36.77ms
+2021-04-15 15:47:47,468——image_name:Cloud_2m_4501.jpg ->no results, time:32.49ms
+2021-04-15 15:47:47,505——image_name:noCloud_2m_4404.jpg, time:36.26ms
+2021-04-15 15:47:47,544——image_name:Cloud_2m_4708.jpg, time:38.67ms
+2021-04-15 15:47:47,589——image_name:noCloud_2m_4546.jpg, time:44.87ms
+2021-04-15 15:47:47,625——image_name:Cloud_2m_4735.jpg, time:35.14ms
+2021-04-15 15:47:47,663——image_name:noCloud_2m_4332.jpg, time:38.35ms
+2021-04-15 15:47:47,699——image_name:Cloud_2m_4632.jpg ->no results, time:35.45ms
+2021-04-15 15:47:47,738——image_name:noCloud_2m_4436.jpg, time:37.96ms
+2021-04-15 15:47:47,775——image_name:noCloud_2m_4306.jpg, time:37.06ms
+2021-04-15 15:47:47,810——image_name:Cloud_2m_4742.jpg, time:35.01ms
+2021-04-15 15:47:47,847——image_name:Cloud_2m_4563.jpg, time:36.76ms
+2021-04-15 15:47:47,883——image_name:noCloud_2m_4548.jpg ->no results, time:35.12ms
+2021-04-15 15:47:47,917——image_name:Cloud_2m_4651.jpg ->no results, time:33.43ms
+2021-04-15 15:47:47,952——image_name:noCloud_2m_4389.jpg, time:35.48ms
+2021-04-15 15:47:47,987——image_name:Cloud_2m_4689.jpg, time:34.49ms
+2021-04-15 15:47:48,023——image_name:Cloud_2m_4695.jpg, time:35.19ms
+2021-04-15 15:47:48,061——image_name:noCloud_2m_4347.jpg, time:38.29ms
+2021-04-15 15:47:48,099——image_name:Cloud_2m_4579.jpg ->no results, time:36.46ms
+2021-04-15 15:47:48,147——image_name:Cloud_2m_4719.jpg ->no results, time:48.32ms
+2021-04-15 15:47:48,195——image_name:Cloud_2m_4737.jpg, time:47.25ms
+2021-04-15 15:47:48,235——image_name:noCloud_2m_4489.jpg, time:39.53ms
+2021-04-15 15:47:48,274——image_name:Cloud_2m_4675.jpg, time:38.36ms
+2021-04-15 15:47:48,311——image_name:Cloud_2m_4581.jpg ->no results, time:37.30ms
+2021-04-15 15:47:48,347——image_name:noCloud_2m_4300.jpg, time:35.92ms
+2021-04-15 15:47:48,380——image_name:Cloud_2m_4703.jpg ->no results, time:32.54ms
+2021-04-15 15:47:48,425——image_name:noCloud_2m_4324.jpg, time:44.20ms
+2021-04-15 15:47:48,461——image_name:Cloud_2m_4557.jpg, time:36.36ms
+2021-04-15 15:47:48,498——image_name:Cloud_2m_4567.jpg, time:36.19ms
+2021-04-15 15:47:48,531——image_name:Cloud_2m_4522.jpg, time:32.48ms
+2021-04-15 15:47:48,564——image_name:Cloud_2m_4656.jpg, time:33.40ms
+2021-04-15 15:47:48,608——image_name:Cloud_2m_4685.jpg, time:43.63ms
+2021-04-15 15:47:48,643——image_name:noCloud_2m_4519.jpg, time:34.12ms
+2021-04-15 15:47:48,677——image_name:Cloud_2m_4562.jpg, time:34.18ms
+2021-04-15 15:47:48,715——image_name:Cloud_2m_4686.jpg, time:37.12ms
+2021-04-15 15:47:48,751——image_name:Cloud_2m_4544.jpg, time:35.67ms
+2021-04-15 15:47:48,784——image_name:noCloud_2m_4522.jpg ->no results, time:33.31ms
+2021-04-15 15:47:48,818——image_name:noCloud_2m_4476.jpg, time:33.73ms
+2021-04-15 15:47:48,857——image_name:Cloud_2m_4678.jpg, time:38.65ms
+2021-04-15 15:47:48,893——image_name:Cloud_2m_4629.jpg, time:35.66ms
+2021-04-15 15:47:48,933——image_name:noCloud_2m_4330.jpg, time:40.07ms
+2021-04-15 15:47:48,972——image_name:Cloud_2m_4566.jpg, time:37.90ms
+2021-04-15 15:47:49,004——image_name:Cloud_2m_4730.jpg ->no results, time:31.76ms
+2021-04-15 15:47:49,039——image_name:Cloud_2m_4671.jpg, time:34.97ms
+2021-04-15 15:47:49,071——image_name:noCloud_2m_4456.jpg ->no results, time:32.22ms
+2021-04-15 15:47:49,104——image_name:noCloud_2m_4304.jpg ->no results, time:32.63ms
+2021-04-15 15:47:49,141——image_name:Cloud_2m_4628.jpg, time:36.11ms
+2021-04-15 15:47:49,176——image_name:noCloud_2m_4524.jpg, time:34.72ms
+2021-04-15 15:47:49,212——image_name:noCloud_2m_4526.jpg, time:35.37ms
+2021-04-15 15:47:49,248——image_name:Cloud_2m_4747.jpg, time:35.93ms
+2021-04-15 15:47:49,285——image_name:Cloud_2m_4727.jpg, time:37.27ms
+2021-04-15 15:47:49,328——image_name:Cloud_2m_4590.jpg, time:42.08ms
+2021-04-15 15:47:49,363——image_name:Cloud_2m_4503.jpg ->no results, time:34.41ms
+2021-04-15 15:47:49,400——image_name:noCloud_2m_4350.jpg, time:36.76ms
+2021-04-15 15:47:49,437——image_name:Cloud_2m_4519.jpg, time:36.58ms
+2021-04-15 15:47:49,472——image_name:Cloud_2m_4597.jpg, time:35.19ms
+2021-04-15 15:47:49,510——image_name:Cloud_2m_4587.jpg, time:37.50ms
+2021-04-15 15:47:49,547——image_name:Cloud_2m_4595.jpg ->no results, time:35.78ms
+2021-04-15 15:47:49,585——image_name:Cloud_2m_4612.jpg, time:38.49ms
+2021-04-15 15:47:49,622——image_name:noCloud_2m_4450.jpg, time:36.43ms
+2021-04-15 15:47:49,653——image_name:noCloud_2m_4413.jpg ->no results, time:30.93ms
+2021-04-15 15:47:49,686——image_name:noCloud_2m_4388.jpg, time:32.24ms
+2021-04-15 15:47:49,723——image_name:Cloud_2m_4552.jpg, time:36.49ms
+2021-04-15 15:47:49,757——image_name:noCloud_2m_4454.jpg, time:33.99ms
+2021-04-15 15:47:49,788——image_name:Cloud_2m_4704.jpg ->no results, time:30.92ms
+2021-04-15 15:47:49,820——image_name:noCloud_2m_4411.jpg ->no results, time:31.89ms
+2021-04-15 15:47:49,856——image_name:noCloud_2m_4431.jpg, time:35.80ms
+2021-04-15 15:47:49,892——image_name:Cloud_2m_4673.jpg, time:34.91ms
+2021-04-15 15:47:49,926——image_name:Cloud_2m_4568.jpg ->no results, time:34.60ms
+2021-04-15 15:47:49,964——image_name:Cloud_2m_4639.jpg, time:36.94ms
+2021-04-15 15:47:49,998——image_name:Cloud_2m_4596.jpg, time:33.65ms
+2021-04-15 15:47:50,031——image_name:noCloud_2m_4466.jpg, time:32.72ms
+2021-04-15 15:47:50,065——image_name:noCloud_2m_4361.jpg, time:34.33ms
+2021-04-15 15:47:50,096——image_name:noCloud_2m_4430.jpg, time:30.39ms
+2021-04-15 15:47:50,130——image_name:noCloud_2m_4365.jpg, time:33.68ms
+2021-04-15 15:47:50,162——image_name:noCloud_2m_4414.jpg ->no results, time:32.34ms
+2021-04-15 15:47:50,194——image_name:noCloud_2m_4458.jpg, time:31.66ms
+2021-04-15 15:47:50,225——image_name:Cloud_2m_4663.jpg, time:30.21ms
+2021-04-15 15:47:50,258——image_name:noCloud_2m_4534.jpg, time:32.95ms
+2021-04-15 15:47:50,292——image_name:Cloud_2m_4586.jpg, time:33.98ms
+2021-04-15 15:47:50,326——image_name:Cloud_2m_4521.jpg, time:33.56ms
+2021-04-15 15:47:50,356——image_name:noCloud_2m_4540.jpg, time:30.13ms
+2021-04-15 15:47:50,389——image_name:noCloud_2m_4412.jpg, time:32.87ms
+2021-04-15 15:47:50,420——image_name:noCloud_2m_4326.jpg, time:30.51ms
+2021-04-15 15:47:50,450——image_name:noCloud_2m_4441.jpg ->no results, time:29.76ms
+2021-04-15 15:47:50,484——image_name:Cloud_2m_4677.jpg, time:33.88ms
+2021-04-15 15:47:50,516——image_name:Cloud_2m_4723.jpg, time:31.23ms
+2021-04-15 15:47:50,549——image_name:Cloud_2m_4724.jpg, time:32.35ms
+2021-04-15 15:47:50,582——image_name:noCloud_2m_4532.jpg, time:33.15ms
+2021-04-15 15:47:50,617——image_name:noCloud_2m_4535.jpg, time:34.56ms
+2021-04-15 15:47:50,657——image_name:Cloud_2m_4665.jpg, time:39.86ms
+2021-04-15 15:47:50,691——image_name:noCloud_2m_4501.jpg, time:33.50ms
+2021-04-15 15:47:50,724——image_name:noCloud_2m_4355.jpg ->no results, time:32.93ms
+2021-04-15 15:47:50,760——image_name:noCloud_2m_4393.jpg, time:35.29ms
+2021-04-15 15:47:50,795——image_name:Cloud_2m_4623.jpg, time:34.75ms
+2021-04-15 15:47:50,831——image_name:Cloud_2m_4693.jpg, time:35.89ms
+2021-04-15 15:47:50,866——image_name:Cloud_2m_4582.jpg, time:35.39ms
+2021-04-15 15:47:50,903——image_name:noCloud_2m_4496.jpg, time:36.46ms
+2021-04-15 15:47:50,939——image_name:noCloud_2m_4395.jpg, time:35.69ms
+2021-04-15 15:47:50,971——image_name:Cloud_2m_4601.jpg ->no results, time:31.63ms
+2021-04-15 15:47:51,008——image_name:Cloud_2m_4507.jpg ->no results, time:36.36ms
+2021-04-15 15:47:51,044——image_name:Cloud_2m_4641.jpg, time:35.72ms
+2021-04-15 15:47:51,079——image_name:noCloud_2m_4445.jpg, time:35.50ms
+2021-04-15 15:47:51,115——image_name:noCloud_2m_4542.jpg, time:35.75ms
+2021-04-15 15:47:51,148——image_name:Cloud_2m_4543.jpg ->no results, time:32.46ms
+2021-04-15 15:47:51,187——image_name:Cloud_2m_4664.jpg, time:39.02ms
+2021-04-15 15:47:51,222——image_name:Cloud_2m_4701.jpg, time:34.33ms
+2021-04-15 15:47:51,257——image_name:Cloud_2m_4748.jpg ->no results, time:34.56ms
+2021-04-15 15:47:51,293——image_name:Cloud_2m_4646.jpg, time:36.18ms
+2021-04-15 15:47:51,326——image_name:noCloud_2m_4495.jpg ->no results, time:32.63ms
+2021-04-15 15:47:51,360——image_name:Cloud_2m_4548.jpg ->no results, time:32.87ms
+2021-04-15 15:47:51,391——image_name:noCloud_2m_4465.jpg, time:31.55ms
+2021-04-15 15:47:51,423——image_name:Cloud_2m_4575.jpg, time:31.35ms
+2021-04-15 15:47:51,456——image_name:noCloud_2m_4321.jpg, time:32.73ms
+2021-04-15 15:47:51,492——image_name:noCloud_2m_4514.jpg, time:35.37ms
+2021-04-15 15:47:51,523——image_name:Cloud_2m_4672.jpg ->no results, time:31.36ms
+2021-04-15 15:47:51,556——image_name:noCloud_2m_4345.jpg, time:32.12ms
+2021-04-15 15:47:51,589——image_name:noCloud_2m_4499.jpg, time:32.93ms
+2021-04-15 15:47:51,623——image_name:noCloud_2m_4448.jpg, time:34.04ms
+2021-04-15 15:47:51,653——image_name:noCloud_2m_4311.jpg ->no results, time:29.52ms
+2021-04-15 15:47:51,683——image_name:Cloud_2m_4616.jpg ->no results, time:30.17ms
+2021-04-15 15:47:51,718——image_name:Cloud_2m_4610.jpg, time:34.75ms
+2021-04-15 15:47:51,749——image_name:Cloud_2m_4733.jpg, time:30.81ms
+2021-04-15 15:47:51,782——image_name:noCloud_2m_4368.jpg, time:32.26ms
+2021-04-15 15:47:51,816——image_name:Cloud_2m_4580.jpg, time:34.26ms
+2021-04-15 15:47:51,854——image_name:noCloud_2m_4472.jpg, time:37.40ms
+2021-04-15 15:47:51,888——image_name:Cloud_2m_4572.jpg, time:33.13ms
+2021-04-15 15:47:51,921——image_name:noCloud_2m_4390.jpg, time:32.47ms
+2021-04-15 15:47:51,956——image_name:noCloud_2m_4474.jpg, time:35.67ms
+2021-04-15 15:47:51,989——image_name:Cloud_2m_4636.jpg, time:32.31ms
+2021-04-15 15:47:52,020——image_name:Cloud_2m_4721.jpg, time:30.77ms
+2021-04-15 15:47:52,058——image_name:Cloud_2m_4622.jpg, time:37.25ms
+2021-04-15 15:47:52,098——image_name:noCloud_2m_4401.jpg, time:40.08ms
+2021-04-15 15:47:52,132——image_name:noCloud_2m_4391.jpg, time:33.54ms
+2021-04-15 15:47:52,162——image_name:noCloud_2m_4483.jpg, time:29.71ms
+2021-04-15 15:47:52,193——image_name:Cloud_2m_4571.jpg ->no results, time:31.30ms
+2021-04-15 15:47:52,224——image_name:noCloud_2m_4385.jpg ->no results, time:30.64ms
+2021-04-15 15:47:52,255——image_name:noCloud_2m_4318.jpg, time:30.70ms
+2021-04-15 15:47:52,286——image_name:Cloud_2m_4699.jpg ->no results, time:30.26ms
+2021-04-15 15:47:52,317——image_name:noCloud_2m_4509.jpg ->no results, time:30.69ms
+2021-04-15 15:47:52,349——image_name:noCloud_2m_4333.jpg, time:32.23ms
+2021-04-15 15:47:52,379——image_name:noCloud_2m_4356.jpg, time:29.61ms
+2021-04-15 15:47:52,414——image_name:noCloud_2m_4360.jpg, time:34.75ms
+2021-04-15 15:47:52,446——image_name:noCloud_2m_4418.jpg, time:31.42ms
+2021-04-15 15:47:52,477——image_name:Cloud_2m_4679.jpg ->no results, time:30.92ms
+2021-04-15 15:47:52,508——image_name:noCloud_2m_4342.jpg ->no results, time:30.79ms
+2021-04-15 15:47:52,544——image_name:Cloud_2m_4666.jpg, time:35.98ms
+2021-04-15 15:47:52,577——image_name:noCloud_2m_4538.jpg, time:32.34ms
+2021-04-15 15:47:52,609——image_name:noCloud_2m_4353.jpg ->no results, time:31.76ms
+2021-04-15 15:47:52,645——image_name:noCloud_2m_4387.jpg, time:35.64ms
+2021-04-15 15:47:52,681——image_name:noCloud_2m_4434.jpg, time:35.81ms
+2021-04-15 15:47:52,716——image_name:Cloud_2m_4574.jpg ->no results, time:34.44ms
+2021-04-15 15:47:52,750——image_name:noCloud_2m_4516.jpg ->no results, time:34.34ms
+2021-04-15 15:47:52,787——image_name:Cloud_2m_4707.jpg, time:36.26ms
+2021-04-15 15:47:52,819——image_name:Cloud_2m_4674.jpg ->no results, time:31.89ms
+2021-04-15 15:47:52,854——image_name:noCloud_2m_4463.jpg, time:34.39ms
+2021-04-15 15:47:52,889——image_name:noCloud_2m_4363.jpg ->no results, time:34.68ms
+2021-04-15 15:47:52,920——image_name:noCloud_2m_4320.jpg, time:30.73ms
+2021-04-15 15:47:52,952——image_name:Cloud_2m_4631.jpg ->no results, time:32.19ms
+2021-04-15 15:47:52,987——image_name:noCloud_2m_4334.jpg, time:34.63ms
+2021-04-15 15:47:53,021——image_name:noCloud_2m_4469.jpg, time:34.01ms
+2021-04-15 15:47:53,054——image_name:noCloud_2m_4479.jpg, time:32.88ms
+2021-04-15 15:47:53,088——image_name:Cloud_2m_4621.jpg, time:33.48ms
+2021-04-15 15:47:53,120——image_name:Cloud_2m_4740.jpg ->no results, time:31.83ms
+2021-04-15 15:47:53,152——image_name:Cloud_2m_4662.jpg ->no results, time:31.39ms
+2021-04-15 15:47:53,185——image_name:noCloud_2m_4493.jpg, time:32.83ms
+2021-04-15 15:47:53,215——image_name:Cloud_2m_4604.jpg ->no results, time:29.86ms
+2021-04-15 15:47:53,249——image_name:Cloud_2m_4711.jpg, time:33.67ms
+2021-04-15 15:47:53,283——image_name:Cloud_2m_4531.jpg, time:33.52ms
+2021-04-15 15:47:53,317——image_name:noCloud_2m_4533.jpg, time:33.33ms
+2021-04-15 15:47:53,350——image_name:noCloud_2m_4520.jpg ->no results, time:32.79ms
+2021-04-15 15:47:53,385——image_name:Cloud_2m_4523.jpg, time:34.46ms
+2021-04-15 15:47:53,413——image_name:Cloud_2m_4659.jpg, time:28.40ms
+2021-04-15 15:47:53,443——image_name:noCloud_2m_4486.jpg ->no results, time:29.51ms
+2021-04-15 15:47:53,479——image_name:noCloud_2m_4348.jpg, time:35.92ms
+2021-04-15 15:47:53,515——image_name:Cloud_2m_4594.jpg, time:35.87ms
+2021-04-15 15:47:53,547——image_name:Cloud_2m_4634.jpg, time:31.48ms
+2021-04-15 15:47:53,576——image_name:noCloud_2m_4352.jpg, time:28.41ms
+2021-04-15 15:47:53,604——image_name:noCloud_2m_4400.jpg ->no results, time:27.41ms
+2021-04-15 15:47:53,634——image_name:noCloud_2m_4325.jpg, time:30.06ms
+2021-04-15 15:47:53,665——image_name:Cloud_2m_4528.jpg, time:30.47ms
+2021-04-15 15:47:53,700——image_name:noCloud_2m_4386.jpg, time:35.65ms
+2021-04-15 15:47:53,733——image_name:noCloud_2m_4370.jpg ->no results, time:31.79ms
+2021-04-15 15:47:53,768——image_name:noCloud_2m_4477.jpg, time:34.68ms
+2021-04-15 15:47:53,799——image_name:Cloud_2m_4500.jpg, time:31.25ms
+2021-04-15 15:47:53,828——image_name:Cloud_2m_4653.jpg, time:28.62ms
+2021-04-15 15:47:53,861——image_name:noCloud_2m_4375.jpg ->no results, time:32.52ms
+2021-04-15 15:47:53,892——image_name:Cloud_2m_4725.jpg ->no results, time:31.04ms
+2021-04-15 15:47:53,923——image_name:noCloud_2m_4371.jpg, time:30.46ms
+2021-04-15 15:47:53,923——detect avg_time: 33.78ms
