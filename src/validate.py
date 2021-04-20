@@ -87,7 +87,6 @@ class Validation():
             self.logger.info("mean AP: %.3f" % (mAP))
             self.logger.info("——————————————————————————")
 
-        model.train()
         return mAP
 
     def __calculate_AP(self, cls):
