@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1e63c6c-966b-4fcf-838d-d317dcfc6a15" name="默认的" comment="" />
+    <list default="true" id="a1e63c6c-966b-4fcf-838d-d317dcfc6a15" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/src/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/validate.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,13 +13,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/RKNN_deploy.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/validate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="268">
+              <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#1413#4676#0" />
+                <element signature="e#4740#5944#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="91" column="90" lean-forward="true" selection-start-line="91" selection-start-column="90" selection-end-line="91" selection-end-column="90" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#3958#6441#0" />
               </folding>
             </state>
           </provider>
@@ -49,6 +67,7 @@
       <find>HersheyFonts</find>
       <find>show_perfs</find>
       <find>models</find>
+      <find>model</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -61,15 +80,15 @@
         <option value="$PROJECT_DIR$/src/loss/yolo_loss.py" />
         <option value="$PROJECT_DIR$/src/txt2xml.py" />
         <option value="$PROJECT_DIR$/src/dataloader/detect_dataset.py" />
-        <option value="$PROJECT_DIR$/src/validate.py" />
         <option value="$PROJECT_DIR$/问题列表与理解.txt" />
         <option value="$PROJECT_DIR$/src/utils/general.py" />
         <option value="$PROJECT_DIR$/../RKNN-toolkit/1.4.0/examples/pytorch/resnet18/test.py" />
-        <option value="$PROJECT_DIR$/src/train.py" />
         <option value="$PROJECT_DIR$/src/detect.py" />
         <option value="$PROJECT_DIR$/src/_config.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$PROJECT_DIR$/src/RKNN_deploy.py" />
+        <option value="$PROJECT_DIR$/src/validate.py" />
+        <option value="$PROJECT_DIR$/src/train.py" />
       </list>
     </option>
   </component>
@@ -79,6 +98,7 @@
     <option name="width" value="699" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -94,6 +114,11 @@
             </path>
             <path>
               <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YOLO-Fastest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
             <path>
@@ -106,6 +131,9 @@
         </subPane>
       </pane>
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -429,17 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/validate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="83" column="118" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="118" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <element signature="e#4740#5944#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/yolo_fastest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -513,16 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/genericpath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -566,10 +573,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RKNN_deploy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
+        <state relative-caret-position="1071">
           <caret line="60" selection-start-line="60" selection-end-line="60" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#1413#4676#0" />
+            <element signature="e#4740#5944#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="91" column="90" lean-forward="true" selection-start-line="91" selection-start-column="90" selection-end-line="91" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#3958#6441#0" />
           </folding>
         </state>
       </provider>

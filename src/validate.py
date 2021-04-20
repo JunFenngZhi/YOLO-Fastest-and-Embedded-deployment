@@ -27,7 +27,7 @@ class Validation():
 
     def get_mAP(self, model, epoch):
         self.clear()  # 清空所有记录
-
+        model.eval()  # 防止BN 和dropout对验证结果的影响
         with torch.no_grad():
             # 遍历验证集，将检测结果和真实结果匹配
             for batch_id, (imgs, targets) in enumerate(self.dataloader):
@@ -86,6 +86,8 @@ class Validation():
             mAP /= self.num_cls
             self.logger.info("mean AP: %.3f" % (mAP))
             self.logger.info("——————————————————————————")
+
+        model.train()
         return mAP
 
     def __calculate_AP(self, cls):

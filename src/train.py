@@ -93,6 +93,7 @@ def train(params, device, tbwriter):
     step_count = 0  # 记录是第几个batch
 
     logger.info("Start training.")
+    model.train()
     for epoch in range(start_epoch, total_epochs):
         for batch_id, (imgs, targets) in enumerate(dataloader):
             start_time = time.time()
