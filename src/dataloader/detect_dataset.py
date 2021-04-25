@@ -71,11 +71,11 @@ class DetectDataset(Dataset):
     def load_rect(self, index, color=128):
         new_shape = self.img_size  # 目标图像尺寸
         img_path = self.img_list[index]
-        ori_img = cv2.imread(img_path)  # 原始图
+        ori_img = cv2.imread(img_path)  # 原始图（BGR格式）
         labels = np.array(self.dataset_dict[img_path])  # 获取该图片对应的label
 
         if new_shape[2] == 1:
-            img = cv2.cvtColor(ori_img, cv2.COLOR_RGB2GRAY)
+            img = cv2.cvtColor(ori_img, cv2.COLOR_BGR2GRAY)
         else:
             img = ori_img  # 深度拷贝，不会影响原图
 

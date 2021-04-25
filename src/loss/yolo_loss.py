@@ -388,7 +388,7 @@ class YOLOLossV3(nn.Module):
             anchor_w = FloatTensor(scaled_anchors).index_select(1, LongTensor([0]))  # 对shape[3,2]的anchors进行列挑选，只选择第一列（w）
             anchor_h = FloatTensor(scaled_anchors).index_select(1, LongTensor([1]))  # 对shape[3,2]的anchors进行列挑选，只选择第二列（h）
             anchor_w = anchor_w.repeat(bs, 1).repeat(1, 1, in_h * in_w).view(w.shape)
-            anchor_h = anchor_h.repeat(bs, 1).repeat(1, 1, in_h * in_w).view(h.shape) # shape?
+            anchor_h = anchor_h.repeat(bs, 1).repeat(1, 1, in_h * in_w).view(h.shape)  # shape?
             
             # 存储还原后的预测值
             pred_boxes = FloatTensor(prediction[..., :4].shape)  # 存储计算得出的（w,h,x_cen,y_cen）（特征图坐标系下）
