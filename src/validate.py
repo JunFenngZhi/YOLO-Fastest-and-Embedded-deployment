@@ -41,7 +41,7 @@ class Validation():
                 for i, item_pred in enumerate(pred):  # 各个scale的输出单独计算统计
                     output_list.append(self.model_loss[i](item_pred))  # 返回predict的所有bounding box（已反向还原为真实坐标）
                 output = torch.cat(output_list, 1)  # 不同尺度的边界框合在一起
-                output = non_max_suppression(output, self.num_cls, conf_thres=self.conf_thres,device=self.device,
+                output = non_max_suppression(output, self.num_cls, conf_thres=self.conf_thres, device=self.device,
                                              nms_thres=self.nms_thres)  # NMS  output_shape(bs,:,7) 每张图检测数量不确定
 
                 for img_id, img_pred in enumerate(output):  # 遍历预测的每一张图片

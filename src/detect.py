@@ -26,6 +26,7 @@ class Detect_YOLO():
         self.device = device
         self.config_params = config_params
         self.nms_thres = config_params["io_params"]["nms_thre"]
+        self.conf_thres = config_params["io_params"]["conf_thre"]
         self.target_shape = config_params["io_params"]["input_size"][0:2]  # 网络输入图像的目标尺寸
         self.logger = logger
         self.colors = [[106, 90, 205], [199, 97, 20], [112, 128, 105]]
@@ -62,15 +63,15 @@ class Detect_YOLO():
                 for i, item_pred in enumerate(pred):  # 获取不同尺度的预测结果
                     output_list.append(self.model_loss[i](item_pred))  # 返回的是predict出来的所有bounding box（已反向还原）
                 output = torch.cat(output_list, 1)  # 不同尺度的边界框合在一起
-                output = non_max_suppression(output, config_params["io_params"]["num_cls"],device=self.device,
-                                             conf_thres=self.nms_thres)
+                output = non_max_suppression(output, config_params["io_params"]["num_cls"], device=self.device,
+                                             conf_thres=self.conf_thres, nms_thres=self.nms_thres)
 
                 output = output[0]  # 一次只处理一张图，所以只取第一个
+                duration = float(time.time() - start_time)  # 计算检测总用时
+                avg_time += duration
                 if output is None:
                     cv2.imwrite(os.path.join(result_path, 'result_'+filename), img_origin)  # 保存结果
-                    duration = float(time.time() - start_time)  # 计算检测用时
-                    avg_time += duration
-                    self.logger.info("image_name:%s ->no results, time:%.2fms" % (filename, duration*1000))
+                    self.logger.info("image_name:%s -> no targets, time:%.2fms" % (filename, duration*1000))
                     continue
 
                 if img_origin.shape[0:2] != tuple(self.target_shape):
@@ -82,12 +83,11 @@ class Detect_YOLO():
                     label = '%s %.2f' % (self.class_names[int(cls_pred)], conf*cls_score)  # conf*cls_score为类别目标置信度
                     plot_one_box(xyxy, img_origin, label=label, color=self.colors[int(cls_pred)], line_thickness=3)
 
-                if os.path.exists(result_path) == False:
+                if os.path.exists(result_path):
                     os.makedirs(result_path)
+
                 cv2.imwrite(os.path.join(result_path, 'result_'+filename), img_origin)  # 保存结果
-                duration = float(time.time() - start_time)  # 计算检测用时
-                avg_time += duration
-                self.logger.info("image_name:%s, time:%.2fms" % (filename, duration * 1000))
+                self.logger.info("image_name:%s -> detect finished, time:%.2fms" % (filename, duration*1000))
 
             self.logger.info("detect avg_time: %.2fms" % (avg_time/num*1000))
 
