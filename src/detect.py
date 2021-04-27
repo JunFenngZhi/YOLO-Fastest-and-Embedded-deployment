@@ -83,7 +83,7 @@ class Detect_YOLO():
                     label = '%s %.2f' % (self.class_names[int(cls_pred)], conf*cls_score)  # conf*cls_score为类别目标置信度
                     plot_one_box(xyxy, img_origin, label=label, color=self.colors[int(cls_pred)], line_thickness=3)
 
-                if os.path.exists(result_path):
+                if os.path.exists(result_path) is False:
                     os.makedirs(result_path)
 
                 cv2.imwrite(os.path.join(result_path, 'result_'+filename), img_origin)  # 保存结果

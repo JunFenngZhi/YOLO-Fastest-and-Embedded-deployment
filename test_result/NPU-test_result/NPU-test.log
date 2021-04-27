@@ -1,0 +1,21 @@
+--> Config rknn
+---> Model is already transfered into rknn format
+--> Loading rknn model
+--> Init runtime environment
+
+I NPUTransfer: Starting NPU Transfer Client, Transfer version 2.0.0 (8f9ebbc@2020-04-03T09:12:43)
+D RKNNAPI: ==============================================
+D RKNNAPI: RKNN VERSION:
+D RKNNAPI:   API: 1.4.0 (b4a8096 build: 2020-08-12 10:16:10)
+D RKNNAPI:   DRV: 1.6.0 (159d2d3 build: 2021-01-12 15:23:09)
+D RKNNAPI: ==============================================
+image_name:noCloud_2m_4530.jpg -> detect finished, infer time:110.08ms, post_process time:145.27, total time:255.35ms
+image_name:Cloud_2m_4092.jpg -> detect finished, infer time:106.99ms, post_process time:135.87, total time:242.86ms
+image_name:noCloud_2m_4529.jpg -> detect finished, infer time:106.62ms, post_process time:138.36, total time:244.98ms
+image_name:noCloud_2m_4528.jpg -> detect finished, infer time:103.55ms, post_process time:134.39, total time:237.95ms
+image_name:Cloud_2m_4093.jpg -> detect finished, infer time:105.57ms, post_process time:120.91, total time:226.48ms
+image_name:Cloud_2m_4091.jpg -> detect finished, infer time:106.23ms, post_process time:131.15, total time:237.38ms
+image_name:Cloud_2m_4089.jpg -> detect finished, infer time:104.80ms, post_process time:132.36, total time:237.16ms
+image_name:noCloud_2m_4531.jpg -> detect finished, infer time:104.26ms, post_process time:132.30, total time:236.56ms
+image_name:noCloud_2m_4527.jpg -> detect finished, infer time:107.26ms, post_process time:135.47, total time:242.73ms
+image_name:Cloud_2m_4090.jpg -> detect finished, infer time:106.14ms, post_process time:131.60, total time:237.74ms

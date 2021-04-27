@@ -15,7 +15,7 @@ config_params = {
             "anchor_mask": [[0, 1, 2], [3, 4, 5]],
             "strides": [16, 32],  # 指的是两个尺度下的放缩倍数。即最后特征图中一个像素对应原图多少像素。
             "conf_thre": 0.5,  # NMS中使用
-            "nms_thre": 0.7,    # NMS  结合数据集特点可以适当增大NMS_thre
+            "nms_thre": 0.2,    # NMS  结合数据集特点可以适当减少NMS_thre。阈值越大，说明能容忍的重叠程度更高
             "class_names": ['carrier', 'defender', 'destroyer']  # 数据集中类别信息
         },
 
