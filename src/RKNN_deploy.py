@@ -53,6 +53,7 @@ def pytoch_to_rknn(model_path, target_path, input_tensor_shape, rknn):
     print("Done!")
 
 
+# 后处理模块
 class PostProcessing():
     def __init__(self, device, config_params):
         pred_branch = len(config_params["io_params"]["strides"])  # 预测分支

@@ -39,17 +39,18 @@ class Detect_YOLO():
             for filename in img_list:
                 img_path = os.path.join(root_path, filename)  # 每张图片的路径
                 img_origin = cv2.imread(img_path)
-
                 img_gray = cv2.cvtColor(img_origin, cv2.COLOR_BGR2GRAY)
+
+                # resize to target shape
                 if img_origin.shape[0:2] == tuple(self.target_shape):
                     img = img_gray  # 假如shape一样可以跳过
                 else:
                     img = self.__resize_img(img_gray, new_shape=self.target_shape)
 
+                # pre-processing
                 img = np.expand_dims(img, -1)  # 在最后增加一个维度
                 img = img[:, :, ::-1].copy().transpose(2, 0, 1)  # （h,w,1）->(1,h,w)
                 img = np.ascontiguousarray(img)
-
                 img = torch.from_numpy(img).to(self.device).float()
                 img = (img - 128.0) / 255.0  # 归一化
 
@@ -123,7 +124,7 @@ class Detect_YOLO():
 
 if __name__ == '__main__':
     logger = config_logger(log_dir='E:\Graduate_Design\YOLO-Fastest\logs\\',
-                              log_name='test.log', tensorboard=False)  # 加载日志模块
+                              log_name='cpu-test.log', tensorboard=False)  # 加载日志模块
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # 设备选择
     detect = Detect_YOLO(device, model_path="E:\Graduate_Design\YOLO-Fastest\models\model_v2\YOLO-Fastest_epoch_29.pth",
