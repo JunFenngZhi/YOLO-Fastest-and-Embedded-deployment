@@ -75,7 +75,7 @@ class Detect_YOLO():
 
                 if output is None:
                     cv2.imwrite(os.path.join(result_path, 'result_'+filename), img_origin)  # 保存结果
-                    self.logger.info("image_name:%s -> no targets, infer time:%.2fms, post_process time:%.2f, total time:%.2fms" % (filename, infer_time, post_process_time, total_time))
+                    self.logger.info("image_name:%s -> no targets, infer time:%.2fms, post_process time:%.2fms, total time:%.2fms" % (filename, infer_time, post_process_time, total_time))
                     continue
 
                 if img_origin.shape[0:2] != tuple(self.target_shape):
@@ -91,7 +91,7 @@ class Detect_YOLO():
                     os.makedirs(result_path)
 
                 cv2.imwrite(os.path.join(result_path, 'result_'+filename), img_origin)  # 保存结果
-                self.logger.info("image_name:%s -> detect finished, infer time:%.2fms, post_process time:%.2f, total time:%.2fms" % (filename, infer_time, post_process_time, total_time))
+                self.logger.info("image_name:%s -> detect finished, infer time:%.2fms, post_process time:%.2fms, total time:%.2fms" % (filename, infer_time, post_process_time, total_time))
 
             self.logger.info("detect avg_time: %.2fms" % (avg_time/num))
 

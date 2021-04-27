@@ -79,7 +79,7 @@ class PostProcessing():
         output = output[0]  # 一次只处理一张图，所以只取第一个
         post_process_time = float(time.time()-time_mark)*1000  # 后处理用时
         if output is None:
-            print("image_name:{} -> no targets, infer time:{:.2f}ms, post_process time:{:.2f}, total time:{:.2f}ms".format(file_name, infer_time, post_process_time,
+            print("image_name:{} -> no targets, infer time:{:.2f}ms, post_process time:{:.2f}ms, total time:{:.2f}ms".format(file_name, infer_time, post_process_time,
                                                                 infer_time + post_process_time))
             return
 
@@ -92,7 +92,7 @@ class PostProcessing():
             os.makedirs(result_path)
 
         cv2.imwrite(os.path.join(result_path, 'result_' + file_name), ori_img)  # 保存结果
-        print("image_name:{} -> detect finished, infer time:{:.2f}ms, post_process time:{:.2f}, total time:{:.2f}ms".format(file_name, infer_time, post_process_time,
+        print("image_name:{} -> detect finished, infer time:{:.2f}ms, post_process time:{:.2f}ms, total time:{:.2f}ms".format(file_name, infer_time, post_process_time,
                                                               infer_time + post_process_time))
         return
 
