@@ -37,7 +37,6 @@ class Detect_YOLO():
             num = len(img_list)  # 待检测图片总数
             avg_time = 0  # 记录检测平均用时
             for filename in img_list:
-                start_time = time.time()
                 img_path = os.path.join(root_path, filename)  # 每张图片的路径
                 img_origin = cv2.imread(img_path)
 
@@ -57,8 +56,11 @@ class Detect_YOLO():
                 if img.ndimension() == 3:
                     img = img.unsqueeze(0)  # 最外层加一个维度->[1,h,w,1]
 
-
+                start_time = time.time()
                 pred = self.model(img)
+                time_mark = time.time()
+                infer_time = float(time_mark - start_time) * 1000  # 推理时间
+
                 output_list = []
                 for i, item_pred in enumerate(pred):  # 获取不同尺度的预测结果
                     output_list.append(self.model_loss[i](item_pred))  # 返回的是predict出来的所有bounding box（已反向还原）
@@ -67,11 +69,13 @@ class Detect_YOLO():
                                              conf_thres=self.conf_thres, nms_thres=self.nms_thres)
 
                 output = output[0]  # 一次只处理一张图，所以只取第一个
-                duration = float(time.time() - start_time)  # 计算检测总用时
-                avg_time += duration
+                post_process_time = float(time.time()-time_mark)*1000  # 后处理用时
+                total_time = post_process_time + infer_time
+                avg_time += total_time
+
                 if output is None:
                     cv2.imwrite(os.path.join(result_path, 'result_'+filename), img_origin)  # 保存结果
-                    self.logger.info("image_name:%s -> no targets, time:%.2fms" % (filename, duration*1000))
+                    self.logger.info("image_name:%s -> no targets, infer time:%.2fms, post_process time:%.2f, total time:%.2fms" % (filename, infer_time, post_process_time, total_time))
                     continue
 
                 if img_origin.shape[0:2] != tuple(self.target_shape):
@@ -87,9 +91,9 @@ class Detect_YOLO():
                     os.makedirs(result_path)
 
                 cv2.imwrite(os.path.join(result_path, 'result_'+filename), img_origin)  # 保存结果
-                self.logger.info("image_name:%s -> detect finished, time:%.2fms" % (filename, duration*1000))
+                self.logger.info("image_name:%s -> detect finished, infer time:%.2fms, post_process time:%.2f, total time:%.2fms" % (filename, infer_time, post_process_time, total_time))
 
-            self.logger.info("detect avg_time: %.2fms" % (avg_time/num*1000))
+            self.logger.info("detect avg_time: %.2fms" % (avg_time/num))
 
     def __resize_img(self, img0, new_shape, color=128):
         '''

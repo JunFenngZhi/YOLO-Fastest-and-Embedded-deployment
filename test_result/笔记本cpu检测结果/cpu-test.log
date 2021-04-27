@@ -1,11 +1,11 @@
-2021-04-27 11:38:04,925！！image_name:Cloud_2m_4089.jpg -> detect finished, time:256.31ms
-2021-04-27 11:38:05,164！！image_name:Cloud_2m_4090.jpg -> detect finished, time:231.38ms
-2021-04-27 11:38:05,393！！image_name:Cloud_2m_4091.jpg -> detect finished, time:222.40ms
-2021-04-27 11:38:05,648！！image_name:Cloud_2m_4092.jpg -> detect finished, time:243.35ms
-2021-04-27 11:38:05,833！！image_name:Cloud_2m_4093.jpg -> detect finished, time:176.53ms
-2021-04-27 11:38:06,064！！image_name:noCloud_2m_4527.jpg -> detect finished, time:223.40ms
-2021-04-27 11:38:06,301！！image_name:noCloud_2m_4528.jpg -> detect finished, time:228.39ms
-2021-04-27 11:38:06,536！！image_name:noCloud_2m_4529.jpg -> detect finished, time:228.39ms
-2021-04-27 11:38:06,761！！image_name:noCloud_2m_4530.jpg -> detect finished, time:218.42ms
-2021-04-27 11:38:06,990！！image_name:noCloud_2m_4531.jpg -> detect finished, time:221.41ms
-2021-04-27 11:38:06,990！！detect avg_time: 225.00ms
+2021-04-27 13:21:00,532！！image_name:Cloud_2m_4089.jpg -> detect finished, infer time:234.40ms, post_process time:0.00, total time:234.40ms
+2021-04-27 13:21:00,766！！image_name:Cloud_2m_4090.jpg -> detect finished, infer time:218.66ms, post_process time:0.00, total time:218.66ms
+2021-04-27 13:21:01,000！！image_name:Cloud_2m_4091.jpg -> detect finished, infer time:218.70ms, post_process time:15.62, total time:234.32ms
+2021-04-27 13:21:01,250！！image_name:Cloud_2m_4092.jpg -> detect finished, infer time:218.70ms, post_process time:15.62, total time:234.32ms
+2021-04-27 13:21:01,469！！image_name:Cloud_2m_4093.jpg -> detect finished, infer time:203.08ms, post_process time:0.00, total time:203.08ms
+2021-04-27 13:21:01,703！！image_name:noCloud_2m_4527.jpg -> detect finished, infer time:218.65ms, post_process time:0.00, total time:218.65ms
+2021-04-27 13:21:01,922！！image_name:noCloud_2m_4528.jpg -> detect finished, infer time:203.08ms, post_process time:15.62, total time:218.70ms
+2021-04-27 13:21:02,156！！image_name:noCloud_2m_4529.jpg -> detect finished, infer time:203.12ms, post_process time:0.00, total time:203.12ms
+2021-04-27 13:21:02,406！！image_name:noCloud_2m_4530.jpg -> detect finished, infer time:218.70ms, post_process time:0.00, total time:218.70ms
+2021-04-27 13:21:02,625！！image_name:noCloud_2m_4531.jpg -> detect finished, infer time:203.05ms, post_process time:0.00, total time:203.05ms
+2021-04-27 13:21:02,625！！detect avg_time: 218.70ms

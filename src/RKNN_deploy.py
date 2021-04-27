@@ -77,10 +77,10 @@ class PostProcessing():
                                      conf_thres=self.conf_thres, nms_thres=self.nms_thres)
 
         output = output[0]  # 一次只处理一张图，所以只取第一个
-        post_process_time = float(time.time()-start_time)*1000  # 后处理用时
+        post_process_time = float(time.time()-time_mark)*1000  # 后处理用时
         if output is None:
             print("image_name:{} -> no targets, infer time:{:.2f}ms, post_process time:{:.2f}, total time:{:.2f}ms".format(file_name, infer_time, post_process_time,
-                                                                infer_time+post_process_time))
+                                                                infer_time + post_process_time))
             return
 
         # 画框
@@ -137,7 +137,8 @@ if __name__ == '__main__':
         
         start_time = time.time()
         outputs = rknn.inference(inputs=[img_grey], data_format='nhwc')
-        infer_time = float(time.time()-start_time)*1000   # NPU推理时间
+        time_mark = time.time()
+        infer_time = float(time_mark-start_time)*1000   # NPU推理时间
         post.process(pred=outputs, ori_img=ori_img, file_name=file_name, result_path=result_path)
 
     rknn.release()
