@@ -394,7 +394,7 @@ class YOLOLossV3(nn.Module):
             pred_boxes = FloatTensor(prediction[..., :4].shape)  # 存储计算得出的（w,h,x_cen,y_cen）（特征图坐标系下）
 
             # scale
-            _scale = torch.Tensor([stride_w, stride_h] * 2).type(FloatTensor)  # 为什么_sacle要乘2
+            _scale = torch.Tensor([stride_w, stride_h] * 2).type(FloatTensor)  # 在末尾重复一次，不是数值乘2
 
             if x.is_cuda:
                 anchor_w = anchor_w.to(self.device)
@@ -411,7 +411,7 @@ class YOLOLossV3(nn.Module):
             pred_boxes[..., 3] = torch.exp(h.data) * anchor_h
 
             # Results
-            output = torch.cat((pred_boxes.view(bs, -1, 4) * _scale,  # 将in_w,in_h这两个维度合在一起
+            output = torch.cat((pred_boxes.view(bs, -1, 4) * _scale,  # 将in_w,in_h这两个维度合在一起（尺度恢复）
                                 conf.view(bs, -1, 1), pred_cls.view(bs, -1, self.num_classes)), -1)  # -1 指的是在最后一个维度上拼接
             return output.data
 
