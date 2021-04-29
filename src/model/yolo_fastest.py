@@ -167,6 +167,7 @@ class YoloFastest(nn.Module):
         x = self.res3_1(x)
         x = self.res3_2(x)
         x = self.conv3_2(x)
+        x = self.conv3_3(x)
         x = self.conv3_4(x)
 
         x = self.res3_3(x)
@@ -202,7 +203,7 @@ class YoloFastest(nn.Module):
         
         head_5 = self.head_5(x)  # 输出
 
-        deconv5_1 = self.deconv5_1(conv5_2)  # 反卷积，扩大特征图尺寸
+        deconv5_1 = self.deconv5_1(conv5_2)  # 反卷积，扩大特征图尺寸（原版用的是直接resize upsample）
         x = torch.cat((conv4_2, deconv5_1), 1)
 
         x = self.conv4_1_1(x)
