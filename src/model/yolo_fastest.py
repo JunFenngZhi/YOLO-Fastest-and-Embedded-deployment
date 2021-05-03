@@ -201,7 +201,7 @@ class YoloFastest(nn.Module):
         x = self.conv5_5(x)
         x = self.conv5_6(x)
         
-        head_5 = self.head_5(x)  # 输出
+        head_small = self.head_5(x)  # 输出
 
         deconv5_1 = self.deconv5_1(conv5_2)  # 反卷积，扩大特征图尺寸（原版用的是直接resize upsample）
         x = torch.cat((conv4_2, deconv5_1), 1)
@@ -211,10 +211,9 @@ class YoloFastest(nn.Module):
         x = self.conv4_1_3(x)
         x = self.conv4_1_4(x)
         x = self.conv4_1_5(x)
+        head_large = self.head_4(x)  # 融合高层次特征后，做出的预测输出
 
-        head_4 = self.head_4(x)  # 融合高层次特征后，做出的预测输出
-
-        return head_4, head_5
+        return head_large, head_small
 
     def initialize_weights(self):
         for m in self.modules():

@@ -340,7 +340,7 @@ class YOLOLossV3(nn.Module):
         w = prediction[..., 2]                         # Width
         h = prediction[..., 3]                         # Height
         conf = torch.sigmoid(prediction[..., 4])       # Confidence
-        pred_cls = torch.sigmoid(prediction[..., 5:])  # Class pred.
+        pred_cls = torch.sigmoid(prediction[..., 5:])  # Class pred.(yolov3处理方法）
 
         if targets is not None:
             #  build target（返回的是初步筛选后认为具体位置可能包含目标的anchor_box的对应参数）
