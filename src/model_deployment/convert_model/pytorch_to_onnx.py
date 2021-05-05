@@ -1,7 +1,7 @@
 import torch
 import torch.onnx
-from model.yolo_fastest import YoloFastest
-from _config import config_params
+from model_training.model.yolo_fastest import YoloFastest
+from model_training._config import config_params
 
 
 # An instance of your model

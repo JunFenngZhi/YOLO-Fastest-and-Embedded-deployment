@@ -2,9 +2,9 @@ import sys
 import torch
 from torch.autograd import Variable
 from torchvision.models import resnet
-from utils import pytorch_to_caffe
-from model.yolo_fastest import YoloFastest, YoloFastest_lite
-from _config import config_params
+from model_training.utils import pytorch_to_caffe
+from model_training.model.yolo_fastest import YoloFastest, YoloFastest_lite
+from model_training._config import config_params
 
 if __name__ == '__main__':
     name = 'YoloFastest'

@@ -3,11 +3,11 @@ import cv2
 import time
 import torch
 import numpy as np
-from model.yolo_fastest import YoloFastest
-from loss.yolo_loss import YOLOLossV3
-from utils.general import non_max_suppression, scale_coords, plot_one_box
-from _config import config_params
-from train import config_logger
+from model_training.model.yolo_fastest import YoloFastest
+from model_training.loss.yolo_loss import YOLOLossV3
+from model_training.utils.general import non_max_suppression, scale_coords, plot_one_box
+from model_training._config import config_params
+from model_training.train import config_logger
 
 
 class Detect_YOLO():

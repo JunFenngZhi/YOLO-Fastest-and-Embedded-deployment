@@ -1,0 +1,20 @@
+模型转换：
+pytorch->onnx->ncnn (具体方法参考：https://github.com/Tencent/ncnn/wiki/use-ncnn-with-pytorch-or-onnx)
+convertmodel.com
+
+推理加速：
+1、 bf16s加速
+2、锁两个A72大核运行 taskset -c 4, 5 程序运行指令
+3、RK3399pro锁频运行 教程见yolo-fastest github
+
+常见NCNN开发问题：
+https://github.com/Tencent/ncnn/blob/master/docs/faq.md
+
+NCNN开发注意要点：
+1、net.load_param()必须放在net.load_model()前面，否则无法读取网络。
+2、直接从pytorch等其它框架转换到ncnn时需要注意blob的名字。
+     ex.input("data", in);和ex.extract("output_1", output_1);中data和output_1都为特定层的blob名字。
+     模型转换后需要在param文件中修改输入输出的blob名字。
+     param文件中的格式可以参考https://blog.csdn.net/lwplwf/article/details/82983904中的介绍。
+     具体层的类型以及相应参数可以查阅ncnn/src中各层的源码。
+3、Mat中如果每个元素有多个通道，可以单独获取该通道。返回的也是一个Mat类型。相当于reshape。
