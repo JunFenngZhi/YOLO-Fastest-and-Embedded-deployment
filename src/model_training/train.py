@@ -154,8 +154,8 @@ def train(params, device, tbwriter):
                     tbwriter.add_scalar(name, value, step_count)  # 记录每一类的loss
 
         scheduler.step()  # 本epoch结束，更新lr
-        if epoch > 0 and (epoch+1) % 2 == 0:
-            mAP = val.get_mAP(epoch=epoch, model=model)  # 每3个epoch计算一次mAP，评估模型性能
+        if epoch > 4:
+            mAP = val.get_mAP(epoch=epoch, model=model)  # 计算一次mAP，评估模型性能
         torch.save(model.state_dict(), os.path.join(save_path, "YOLO-Fastest_epoch_{}.pth".format(str(epoch))))
 
     torch.cuda.empty_cache()

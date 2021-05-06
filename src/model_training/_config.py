@@ -36,7 +36,7 @@ config_params = {
 
         "train_params": {
             "pretrained_pth": "/home/hjh-rog/0_workspace/6_detect/yolo-fastest/pretrained/epoch_0.pt",
-            "total_epochs": 20,
+            "total_epochs": 30,
             "batch_size": 16,
             # initial learning rate (SGD=1E-2, Adam=1E-3)
             "lr0": 0.001,
