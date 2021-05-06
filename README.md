@@ -6,7 +6,8 @@
 1、 基于ncnn推理框架部署。ncnn是一个为嵌入式端极致优化的高性能神经网络前向计算框架。因为本项目使用的是pytorch版本下的模型，转换模型格式后无法直接使用ncnn中自带的yolo后处理层(yolov3detectionoutput),所以本项目参照ncnn源码自行实现了yolo后处理。  
 2、基于NPU模块部署。NPU模块是专门用于神经网络推理计算的计算单元，通常推理速度会远高于CPU。本项目使用RK3399proD开发板上搭载的NPU模块并通过配套的rknn-toolkit API进行网络部署。  
 
-*   本项目使用的数据集为海面背景下的小目标舰船模拟数据集。可以在https://pan.baidu.com/s/1xoaVfP7ldfOdn3Ixcf7hSA 处下载。
+*   本项目使用的数据集为海面背景下的小目标舰船模拟数据集。可以在下方链接下载。  
+https://pan.baidu.com/s/1xoaVfP7ldfOdn3Ixcf7hSA
 
 ## Performance
 To be added...
