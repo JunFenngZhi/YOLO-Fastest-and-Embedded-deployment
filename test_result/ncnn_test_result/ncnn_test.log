@@ -1,0 +1,11 @@
+toybrick@debian10:~/ncnn_project$ taskset -c 4,5 ./yolo_fastest
+image_name:Cloud_2m_4089.jpg -> detect finished, infer time:146.97ms, post_process time:0.26ms, total time:147.24ms
+image_name:Cloud_2m_4090.jpg -> detect finished, infer time:143.56ms, post_process time:0.17ms, total time:143.73ms
+image_name:Cloud_2m_4091.jpg -> detect finished, infer time:148.90ms, post_process time:0.15ms, total time:149.05ms
+image_name:Cloud_2m_4092.jpg -> detect finished, infer time:142.64ms, post_process time:0.17ms, total time:142.81ms
+image_name:Cloud_2m_4093.jpg -> detect finished, infer time:139.35ms, post_process time:0.16ms, total time:139.51ms
+image_name:noCloud_2m_4527.jpg -> detect finished, infer time:137.83ms, post_process time:0.17ms, total time:138.00ms
+image_name:noCloud_2m_4528.jpg -> detect finished, infer time:139.98ms, post_process time:0.16ms, total time:140.14ms
+image_name:noCloud_2m_4529.jpg -> detect finished, infer time:147.92ms, post_process time:0.18ms, total time:148.10ms
+image_name:noCloud_2m_4530.jpg -> detect finished, infer time:139.35ms, post_process time:0.17ms, total time:139.52ms
+image_name:noCloud_2m_4531.jpg -> detect finished, infer time:137.38ms, post_process time:0.17ms, total time:137.55ms

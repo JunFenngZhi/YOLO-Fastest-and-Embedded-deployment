@@ -7,7 +7,7 @@ convertmodel.com
 推理加速：
 1、 bf16s加速
 2、锁两个A72大核运行 taskset -c 4, 5 程序运行指令
-3、RK3399pro锁频运行 教程见yolo-fastest github
+3、RK3399pro锁频运行 教程见yolo-fastest github  （需要先获取su权限再修改）
 
 常见NCNN开发问题：
 https://github.com/Tencent/ncnn/blob/master/docs/faq.md

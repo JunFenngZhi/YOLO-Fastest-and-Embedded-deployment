@@ -3,14 +3,13 @@
 
 
 
-
 int main()
 {
     //YOLO检测参数
-	string resultPath = "E:\\Graduate_Design\\YOLO-Fastest\\test_result";
-	string dataPath = "E:\\Graduate_Design\\YOLO-Fastest\\test_data";
-	string param_path = "E:\\Graduate_Design\\NCNN\\model\\onnx_to_ncnn\\YOLO-Fastest_epoch_29-opt.param";
-	string bin_path = "E:\\Graduate_Design\\NCNN\\model\\onnx_to_ncnn\\YOLO-Fastest_epoch_29-opt.bin";
+	string resultPath = "/home/toybrick/ncnn_project/test_result";
+	string dataPath = "/home/toybrick/ncnn_project/test_data";
+	string param_path = "/home/toybrick/ncnn_project/model/YOLO-Fastest_epoch_27-opt.param";
+	string bin_path = "/home/toybrick/ncnn_project/model/YOLO-Fastest_epoch_27-opt.bin";
 	vector<string>class_name = { "carrier", "defender", "destroyer" };
 	vector<cv::Scalar> box_color = { cv::Scalar(106, 90, 205),cv::Scalar(199, 97, 20),cv::Scalar(112, 128, 105) };
 	int num_class = 3;
@@ -26,7 +25,7 @@ int main()
 	for (int i = 0; i < file_path.size(); i++) 
 	{
 		//路径分割
-		size_t found = file_path[i].find_last_of("\\"); 
+		size_t found = file_path[i].find_last_of("/"); 
 		cv::String path = file_path[i].substr(0, found);
 		cv::String file_name = file_path[i].substr(found + 1);
 
@@ -46,7 +45,7 @@ int main()
 			printf("image_name:%s -> detect finished, infer time:%.2fms, post_process time:%.2fms, total time:%.2fms\n", file_name.c_str(), infer_time,
 				post_process_time, infer_time + post_process_time);
 		}
-		//cv::imwrite(resultPath + "\\result_" + file_name, img);
+		cv::imwrite(resultPath + "/result_" + file_name, img);
 
 	}
 

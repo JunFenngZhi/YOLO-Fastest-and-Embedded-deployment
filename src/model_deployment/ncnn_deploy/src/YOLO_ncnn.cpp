@@ -1,5 +1,6 @@
 #include "utils.h"
 #include "YOLO_ncnn.h"
+#include <omp.h>
 
 
 Detect_YOLO::Detect_YOLO(const char* paramPath, const char* binPath, const vector<int>&img_size, 
@@ -88,7 +89,7 @@ int Detect_YOLO::decode_bbox(const vector<ncnn::Mat>& pred, vector<BBoxRect>& al
 		}
 			
 		//按anchors类别分开遍历
-		#pragma omp parallel for num_threads(opt.num_threads) //OPENmp并行加速
+		#pragma omp parallel for num_threads(NUMTHREADS) //OPENmp并行加速
 		for (int pp = 0; pp < num_anchors; pp++)  
 		{	
 			//划分通道，便于单独访问
