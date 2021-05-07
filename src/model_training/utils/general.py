@@ -107,7 +107,7 @@ def del_tensor_element(arr, index):
 6、返回每个图片所有类别的NMS处理后的检测结果。每个检测结果存储形式为(x1, y1, x2, y2, object_conf, class_score, class_pred)
 注： class_pred值对应的类别和数据集导入时数组下标对应的类别一致
 '''
-def non_max_suppression(prediction, num_classes, device, conf_thres=0.5, nms_thres=0.4):
+def non_max_suppression(prediction, num_classes,conf_thres=0.5, nms_thres=0.4):
 
     # From (center x, center y, width, height) to (x1, y1, x2, y2)
     box_corner = prediction.new(prediction.shape)
@@ -135,9 +135,7 @@ def non_max_suppression(prediction, num_classes, device, conf_thres=0.5, nms_thr
         detections = torch.cat((image_pred[:, :5], class_conf.float(), class_pred.float()), 1)
 
         # Iterate through all predicted classes
-        unique_labels = detections[:, -1].cpu().unique()  # 获取类别列表
-        if prediction.is_cuda:
-            unique_labels = unique_labels.to(device)
+        unique_labels = detections[:, -1].unique()  # 获取类别列表
         for c in unique_labels:
             # 获取指定类别的检测结果
             detections_class = detections[detections[:, 6] == c]

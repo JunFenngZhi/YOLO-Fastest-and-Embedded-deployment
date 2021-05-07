@@ -4,10 +4,10 @@ from rknn.api import RKNN
 import os
 import time
 import torch
-from yolo_fastest import YoloFastest
-from _config import config_params
-from yolo_loss import YOLOLossV3
-from general import non_max_suppression,plot_one_box
+from model_training.model.yolo_fastest import YoloFastest
+from model_training._config import config_params
+from model_training.loss.yolo_loss import YOLOLossV3
+from model_training.utils.general import non_max_suppression,plot_one_box
 
 
 # 将pytorch参数模型导出，保存为torchscript格式
@@ -63,7 +63,6 @@ class PostProcessing():
                                               num_classes=config_params["io_params"]["num_cls"],
                                               img_size=config_params["io_params"]["input_size"], device=device))
         self.class_names = config_params["io_params"]["class_names"]
-        self.device = device
         self.config_params = config_params
         self.nms_thres = config_params["io_params"]["nms_thre"]
         self.conf_thres = config_params["io_params"]["conf_thre"]
@@ -74,7 +73,7 @@ class PostProcessing():
         for i, item_pred in enumerate(pred):  # 获取不同尺度的预测结果
             output_list.append(self.model_loss[i](torch.from_numpy(item_pred)))  # 返回的是predict出来的所有bounding box（已反向还原）
         output = torch.cat(output_list, 1)  # 不同尺度的边界框合在一起
-        output = non_max_suppression(output, config_params["io_params"]["num_cls"], device=self.device,
+        output = non_max_suppression(output, config_params["io_params"]["num_cls"],
                                      conf_thres=self.conf_thres, nms_thres=self.nms_thres)
 
         output = output[0]  # 一次只处理一张图，所以只取第一个

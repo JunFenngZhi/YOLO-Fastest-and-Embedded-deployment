@@ -66,7 +66,7 @@ class Detect_YOLO():
                 for i, item_pred in enumerate(pred):  # 获取不同尺度的预测结果
                     output_list.append(self.model_loss[i](item_pred))  # 返回的是predict出来的所有bounding box（已反向还原）
                 output = torch.cat(output_list, 1)  # 不同尺度的边界框合在一起
-                output = non_max_suppression(output, config_params["io_params"]["num_cls"], device=self.device,
+                output = non_max_suppression(output, config_params["io_params"]["num_cls"],
                                              conf_thres=self.conf_thres, nms_thres=self.nms_thres)
 
                 output = output[0]  # 一次只处理一张图，所以只取第一个
