@@ -12,14 +12,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/detect.py">
+        <entry file="file://$PROJECT_DIR$/src/model_training/model/yolo_fastest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-589">
-              <caret line="68" column="44" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="44" />
+            <state relative-caret-position="-1064">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#23#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,6 +83,7 @@
         <option value="$PROJECT_DIR$/src/detect.py" />
         <option value="$PROJECT_DIR$/src/model_training/validate.py" />
         <option value="$PROJECT_DIR$/src/model_deployment/rknn_deploy/rknn_deploy.py" />
+        <option value="$PROJECT_DIR$/src/model_training/dataloader/detect_dataset.py" />
       </list>
     </option>
   </component>
@@ -109,6 +110,33 @@
               <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
               <item name="YOLO-Fastest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YOLO-Fastest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model_training" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YOLO-Fastest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model_training" type="462c0819:PsiDirectoryNode" />
+              <item name="dataloader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YOLO-Fastest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model_training" type="462c0819:PsiDirectoryNode" />
+              <item name="loss" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YOLO-Fastest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model_training" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
@@ -482,15 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_training/dataloader/detect_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model_deployment/convert_model/pytorch_to_caffe.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -536,30 +555,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_training/model/yolo_fastest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="e#23#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model_training/_config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_training/loss/yolo_loss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-672">
-          <caret line="402" column="47" lean-forward="true" selection-start-line="402" selection-start-column="47" selection-end-line="402" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -603,12 +602,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/detect.py">
+    <entry file="file://$PROJECT_DIR$/src/model_training/loss/yolo_loss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-589">
-          <caret line="68" column="44" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="44" />
+        <state relative-caret-position="506">
+          <caret line="322" column="43" selection-start-line="322" selection-start-column="43" selection-end-line="322" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#12898#18036#0" />
+            <element signature="e#18166#21038#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model_training/dataloader/detect_dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/detect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model_training/model/yolo_fastest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1064">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="e#23#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
