@@ -1,20 +1,21 @@
 config_params = {
         "io_params": {
-            "save_path": '/home/gpu/zhijunfeng/YOLO-Fastest/models/',
-            "log_path": '/home/gpu/zhijunfeng/YOLO-Fastest/logs/',
+            "save_path": '/home/gpu/zhijunfeng/YOLO-Fastest/models/',  # 模型存储路径
+            "log_path": '/home/gpu/zhijunfeng/YOLO-Fastest/logs/',     # 程序日志存储路径
             "anchors": [
+                    [[10, 13], [16, 30], [33, 23]],
                     [[150, 75], [100, 100], [75, 150]],
-                    [[300, 150], [200, 200], [150, 300]],
-                    [[10, 13], [16, 30], [33, 23]]
+                    [[300, 150], [200, 200], [150, 300]]
                          ],  # 每组三个，对应三个不同的尺度  每个指的是【w,h】
             "input_channel": 1,
-            "input_size": [512, 640, 1],  # 网络的输入图像尺寸。假如原始图片不符合，则要变成该尺寸 【行，列，通道数】
+            "input_shape": [256, 320, 1],  # 网络的输入图像尺寸(行和列必须为32的倍数)  【行，列，通道数】 网络在输入图坐标系预测目标，最后再把结果恢复到原始图坐标系下
+            "origin_img_shape": [512, 640, 3],  # 数据集中原始输入图片尺寸  【行，列，通道数】
             "input_tensor_shape": (1, 1, 512, 640),
             "num_cls": 3,  # 类别数
             "num_anchors": 3,
             "anchor_mask": [[0, 1, 2], [3, 4, 5]],
-            "strides": [16, 32],  # 指的是两个尺度下的放缩倍数。即最后特征图中一个像素对应原图多少像素。
-            "conf_thre": 0.5,  # NMS中使用
+            "strides": [16, 32],  # 指的是两个尺度下的放缩倍数。即输出特征图的长和宽相对输入缩小多少倍。
+            "conf_thre": 0.5,  # 后处理中使用，去除无效检测结果
             "nms_thre": 0.2,    # NMS  结合数据集特点可以适当减少NMS_thre。阈值越大，说明能容忍的重叠程度更高
             "class_names": ['carrier', 'defender', 'destroyer']  # 数据集中类别信息
         },

@@ -11,8 +11,7 @@ class Validation():
         self.model_loss = model_loss
         self.device = device
         self.bs = params["train_params"]["batch_size"]
-        self.n_anchors = params["io_params"]["num_anchors"]
-        self.img_size = params["io_params"]["input_size"]  # 网络输入图片的尺寸大小
+        self.input_shape = params["io_params"]["input_shape"]
         self.num_cls = params["io_params"]["num_cls"]
         self.cls_name = params["io_params"]["class_names"]
         self.IOU_threshold = params["train_params"]["IOU_val_thre"]  # 预测位置和真实位置匹配阈值
@@ -39,7 +38,7 @@ class Validation():
                 pred = model(imgs)
                 output_list = []
                 for i, item_pred in enumerate(pred):  # 各个scale的输出单独计算统计
-                    output_list.append(self.model_loss[i](item_pred))  # 返回predict的所有bounding box（已反向还原为真实坐标）
+                    output_list.append(self.model_loss[i](item_pred))  # 返回predict的所有bounding box（已反向还原至网络输入图片坐标系）
                 output = torch.cat(output_list, 1)  # 不同尺度的边界框合在一起
                 output = non_max_suppression(output, self.num_cls, conf_thres=self.conf_thres,
                                              nms_thres=self.nms_thres)  # NMS  output_shape(bs,:,7) 每张图检测数量不确定
@@ -128,10 +127,10 @@ class Validation():
             self.match_list.append([])
             self.target_num[c] = 0.
 
-    # 将归一化的目标边框坐标恢复为真实坐标，并转换坐标形式（x1,y1,x2,y2,cls_id,255）
+    # 将归一化的目标边框坐标恢复为网路输入图像坐标系，并转换坐标形式（x1,y1,x2,y2,cls_id,255）
     def __recover_targets(self, targets):
-        in_h = self.img_size[0]
-        in_w = self.img_size[1]
+        in_h = self.input_shape[0]
+        in_w = self.input_shape[1]
         targets[:, :, (0, 2)] = targets[:, :, (0, 2)] * in_w
         targets[:, :, (1, 3)] = targets[:, :, (1, 3)] * in_h
         for b in range(self.bs):

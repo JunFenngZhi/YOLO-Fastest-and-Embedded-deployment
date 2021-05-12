@@ -16,10 +16,10 @@ from _config import config_params
 from validate import Validation
 
 
-def config_logger(log_dir, log_name,tensorboard=True):
+def config_logger(log_dir, log_name, tensorboard=True):
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.INFO)  # INFO或者比INFO等级高的都显示
-    if os.path.exists(log_dir) == False:
+    if os.path.exists(log_dir) is False:
         os.makedirs(log_dir)
     fh = logging.FileHandler(os.path.join(log_dir,log_name), mode='w')  # 创建一个handler，用于写入日志文件
     ch = logging.StreamHandler()   # 再创建一个handler，用于输出到控制台
@@ -40,17 +40,17 @@ def train(params, device, tbwriter):
     # 参数加载
     pretrained_pth = params["train_params"]["pretrained_pth"]  # 预训练模型的路径
     save_path = params["io_params"]["save_path"]  # 设定保存模型的路径
-    if os.path.exists(save_path) == False:
+    if os.path.exists(save_path) is False:
         os.makedirs(save_path)
-    pred_branch = len(params["io_params"]["strides"])  # 2 对应网络的两个尺度的预测输出
+    pred_branch = len(params["io_params"]["strides"])  # 网络输出分支数
     total_epochs = params["train_params"]["total_epochs"]
     batch_size = params["train_params"]["batch_size"]
 
     # loss类
     model_loss = []
     for i in range(pred_branch):  # 每一个尺度的anchor对应一个loss类
-        model_loss.append(YOLOLossV3(params["io_params"]["anchors"][i], params["io_params"]["num_cls"],
-                                     params["io_params"]["input_size"], device=device))
+        model_loss.append(YOLOLossV3(anchors=params["io_params"]["anchors"][i], num_classes=params["io_params"]["num_cls"],
+                                     input_shape=params["io_params"]["input_shape"], device=device))
 
     # 模型实例化
     model = YoloFastest(params["io_params"]).to(device)
@@ -58,20 +58,22 @@ def train(params, device, tbwriter):
     # 模型导入或初始化
     if os.path.exists(pretrained_pth):
         logger.info("Load pretrained model %s" % pretrained_pth)
-        ckpt = torch.load(pretrained_pth)  # 加载预训练模型的参数
-        model.load_state_dict(ckpt)   # 将参数设置到model中
+        net_param = torch.load(pretrained_pth, map_location=device)  # 加载预训练模型的参数
+        model.load_state_dict(net_param)   # 将参数设置到model中
     else:
         logger.info("initialize model")
         model.initialize_weights()
 
     # 分批读入数据集，并作数据增强
-    train_dataset = DetectDataset(img_size=config_params["io_params"]["input_size"], max_boxes=64,
-                            aug_params=config_params["augment_params"], logger=logger)
+    train_dataset = DetectDataset(input_shape=config_params["io_params"]["input_shape"], max_boxes=64,
+                                  origin_img_shape=config_params["io_params"]["origin_img_shape"],
+                                  aug_params=config_params["augment_params"], logger=logger)
     dataloader = DataLoader(train_dataset, batch_size=batch_size, num_workers=0,  # 分批读取数据用于训练
                             drop_last=True, pin_memory=True, shuffle=True,
                             collate_fn=DetectDataset.collate_fn)  # collate_fn 自定义batch输出
-    val_dataset = DetectDataset(img_size=config_params["io_params"]["input_size"], max_boxes=64, augment=False,
-                            aug_params=config_params["augment_params"], logger=logger, val=True)
+    val_dataset = DetectDataset(input_shape=config_params["io_params"]["input_shape"], max_boxes=64, augment=False,
+                                origin_img_shape=config_params["io_params"]["origin_img_shape"],
+                                aug_params=config_params["augment_params"], logger=logger, val=True)
     val = Validation(params=config_params, logger=logger, dataset=val_dataset,
                      device=device, model_loss=model_loss)  # 用于模型验证，计算mAP
 
@@ -80,8 +82,7 @@ def train(params, device, tbwriter):
 
     # 优化器设置
     train_params = params["train_params"]
-    optimizer = optim.Adam(model.parameters(), lr=train_params['lr0'], betas=(0.9, 0.999),
-                           eps=1e-08)
+    optimizer = optim.Adam(model.parameters(), lr=train_params['lr0'], betas=(0.9, 0.999), eps=1e-08)
 
     def lf(epoch):
         return ((1+math.cos(epoch*math.pi/total_epochs))/2)*0.8+0.2
@@ -126,7 +127,7 @@ def train(params, device, tbwriter):
                     losses[j].append(l)
 
             losses = [sum(l) for l in losses]  # 对于每一项，将两个pred的loss加在一起
-            loss = losses[0] # 获取total loss
+            loss = losses[0]  # 获取total loss
             loss.backward()  # 反向传播，计算梯度
             optimizer.step()  # 根据梯度更新权值
 
@@ -155,7 +156,7 @@ def train(params, device, tbwriter):
 
         scheduler.step()  # 本epoch结束，更新lr
         if epoch > 4:
-            mAP = val.get_mAP(epoch=epoch, model=model)  # 计算一次mAP，评估模型性能
+            val.get_mAP(epoch=epoch, model=model)  # 计算一次mAP，评估模型性能
         torch.save(model.state_dict(), os.path.join(save_path, "YOLO-Fastest_epoch_{}.pth".format(str(epoch))))
 
     torch.cuda.empty_cache()

@@ -123,11 +123,11 @@ class Detect_YOLO():
 
 
 if __name__ == '__main__':
-    logger = config_logger(log_dir='E:\Graduate_Design\YOLO-Fastest\logs\\',
+    logger = config_logger(log_dir='E:\Graduate_Design\YOLO-Fastest\\test_result',
                               log_name='cpu-test.log', tensorboard=False)  # 加载日志模块
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # 设备选择
-    detect = Detect_YOLO(device, model_path="E:\Graduate_Design\YOLO-Fastest\models\model_v2\YOLO-Fastest_epoch_29.pth",
+    detect = Detect_YOLO(device, model_path="E:\Graduate_Design\YOLO-Fastest\models\pytorch\YOLO-Fastest_epoch_27.pth",
                          config_params=config_params, logger=logger)
     detect.batch_detect(root_path="E:\Graduate_Design\YOLO-Fastest\\test_data",
                         result_path="E:\Graduate_Design\YOLO-Fastest\\test_result")

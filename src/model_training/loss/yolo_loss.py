@@ -300,13 +300,13 @@ class YOLOLoss(nn.Module):
         return noobj_mask, pred_boxes
 
 class YOLOLossV3(nn.Module):
-    def __init__(self, anchors, num_classes, img_size, device):
+    def __init__(self, anchors, num_classes, input_shape, device):
         super(YOLOLossV3, self).__init__()
         self.anchors = anchors   # size(3,2) 其中一组（一个scale）
         self.num_anchors = len(anchors)  # 每个尺度下的anchor boxes数量
         self.num_classes = num_classes
         self.bbox_attrs = 5 + num_classes  # 每个boxes对应的预测量
-        self.img_size = img_size
+        self.input_shape = input_shape
         self.ignore_threshold = config_params["train_params"]["IOU_loss_thre"]  # anchor box 筛选标准（只根据shape） IOU ignore
         self.device = device
 
@@ -324,8 +324,8 @@ class YOLOLossV3(nn.Module):
         bs = input.size(0)  # batch_size
         in_h = input.size(2)  # predict特征图的高
         in_w = input.size(3)  # predict特征图的宽
-        stride_h = self.img_size[0] / in_h  # 特征图相对原图缩小倍数
-        stride_w = self.img_size[1] / in_w
+        stride_h = self.input_shape[0] / in_h  # 特征图相对原图缩小倍数
+        stride_w = self.input_shape[1] / in_w
 
         # 原_ah/(原_h/特_h)=(原_ah/原_h)*特_h  在特征图坐标系下anchor_box的长宽
         scaled_anchors = [(a_w / stride_w, a_h / stride_h) for a_w, a_h in self.anchors]
@@ -334,7 +334,7 @@ class YOLOLossV3(nn.Module):
         prediction = input.view(bs,  self.num_anchors,
                                 self.bbox_attrs, in_h, in_w).permute(0, 1, 3, 4, 2).contiguous()
 
-        # Get outputs（特征图各个像素预测的各个anchor box得出的x,y,w,h,conf,pred_cls）
+        # Get outputs（特征图各个像素预测的各个anchor box的tx,ty,tw,th,conf,pred_cls）
         x = torch.sigmoid(prediction[..., 0])          # Center x
         y = torch.sigmoid(prediction[..., 1])          # Center y
         w = prediction[..., 2]                         # Width
@@ -411,7 +411,7 @@ class YOLOLossV3(nn.Module):
             pred_boxes[..., 3] = torch.exp(h.data) * anchor_h
 
             # Results
-            output = torch.cat((pred_boxes.view(bs, -1, 4) * _scale,  # 将in_w,in_h这两个维度合在一起（尺度恢复）
+            output = torch.cat((pred_boxes.view(bs, -1, 4) * _scale,  # 将in_w,in_h这两个维度合在一起（尺度恢复至网络输入图片坐标系）
                                 conf.view(bs, -1, 1), pred_cls.view(bs, -1, self.num_classes)), -1)  # -1 指的是在最后一个维度上拼接
             return output.data
 
