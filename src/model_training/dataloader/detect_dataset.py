@@ -92,7 +92,7 @@ class DetectDataset(Dataset):
         ori_img = cv2.imread(img_path)  # 原始图（BGR格式）
         labels = np.array(self.dataset_dict[img_path])  # 获取该图片对应的label
 
-        if self.input_shape[2] == 1:  # 网络要求单通道输入
+        if self.input_shape[2] == 1 and self.origin_img_shape[2] != 1:  # 网络要求单通道输入
             img = cv2.cvtColor(ori_img, cv2.COLOR_BGR2GRAY)
         else:
             img = ori_img  # 深度拷贝，不会影响原图
@@ -111,7 +111,7 @@ class DetectDataset(Dataset):
             bboxes.append([box])
         images = np.concatenate(images, axis=0)  # 将原本成对的img和label拆开。各自组合成一个大的numpy,形成batch
         bboxes = np.concatenate(bboxes, axis=0)
-        images = images.transpose(0, 3, 1, 2)  # reshape将各维度度重新组合。【num.h,w,1】->【num,1,h,w】
+        images = images.transpose(0, 3, 1, 2)  # reshape将各维度度重新组合。【num.h,w,chanel】->【num,chanel,h,w】
         images = torch.from_numpy(images).div(255.0)   # 将numpy转为tensor,两者共享内存
         bboxes = torch.from_numpy(bboxes)
         return images, bboxes

@@ -3,33 +3,137 @@ import cv2
 import time
 import torch
 import numpy as np
+import math
 from model_training.model.yolo_fastest import YoloFastest
-from model_training.loss.yolo_loss import YOLOLossV3
-from model_training.utils.general import non_max_suppression, scale_coords, plot_one_box
+from model_training.utils.general import plot_one_box
 from model_training._config import config_params
 from model_training.train import config_logger
 
+
+# 避免使用pytorch库函数，使用numpy库完成后处理
+class YOLO_post_process:
+    def __init__(self, conf_thres, nms_thres, num_anchors, num_class, anchors, input_shape):
+        self.conf_thres = conf_thres
+        self.nms_thres = nms_thres
+        self.num_anchors = num_anchors
+        self.bbox_attrs = 5 + num_class  # 每个boxes对应的预测值数量
+        self.anchors = anchors
+        self.input_shape = input_shape
+
+    @staticmethod
+    def __sigmoid(x):
+        return 1. / (1. + math.exp(-x))
+
+    @staticmethod
+    def __cal_iou(box_1, box_2):
+        inter_area = 0
+
+        inter_w = min(box_1[2], box_2[2]) - max(box_1[0], box_2[0])
+        inter_h = min(box_1[3], box_2[3]) - max(box_1[1], box_2[1])
+        if inter_w > 0 and inter_h > 0:
+            inter_area = inter_h * inter_w   # 交集
+
+        union_area = (box_1[2] - box_1[0]) * (box_1[3] - box_1[1]) +\
+        (box_2[2] - box_2[0]) * (box_2[3] - box_2[1]) - inter_area   # 并集
+
+        return inter_area/union_area
+
+    def decode_box(self, pred):
+        all_bbox_rects = []
+        for head, pred_head in enumerate(pred):
+            pred_head = pred_head.numpy()[0]  # 转换为numpy
+            in_w = pred_head.shape[2]
+            in_h = pred_head.shape[1]
+            scale_h = self.input_shape[0]/in_h   # 高度上的输出特征图缩小倍数(相对于网络输入图片坐标系而言)
+            scale_w = self.input_shape[1]/in_w   # 宽度上的输出特征图缩小倍数
+            anchors = self.anchors[head]
+
+            pred_head = pred_head.reshape((self.num_anchors, self.bbox_attrs, in_h, in_w))
+            for pp in range(self.num_anchors):
+                for i in range(in_h):
+                    for j in range(in_w):
+                        conf = self.__sigmoid(pred_head[pp, 4, i, j])
+                        if conf > self.conf_thres:  # 大于置信度阈值，保留
+                            cls_index = np.argmax(pred_head[pp, 5:, i, j])
+                            cls_score = self.__sigmoid(np.max(pred_head[pp, 5:, i, j]))
+                            x = (j + self.__sigmoid(pred_head[pp, 0, i, j]))*scale_w
+                            y = (i + self.__sigmoid(pred_head[pp, 1, i, j]))*scale_h
+                            w = math.exp(pred_head[pp, 2, i, j]) * anchors[pp][0]
+                            h = math.exp(pred_head[pp, 3, i, j]) * anchors[pp][1]
+                            all_bbox_rects.append(
+                                [round(x - w / 2), round(y - h / 2), round(x + w / 2), round(y + h / 2), conf, cls_score, cls_index])
+        return all_bbox_rects
+
+    def non_maxium_supression(self, bbox_list):
+        results = []
+        while len(bbox_list) != 0:
+            results.append(bbox_list[0])  # 选择conf最大的作为检测结果
+            if len(bbox_list) == 1:
+                break
+            bbox_list.pop(0)  # 去掉已选择的bbox
+            i = 0
+            while i <= len(bbox_list)-1:
+                iou = self.__cal_iou(bbox_list[i], results[-1])
+                if iou > self.nms_thres:
+                    bbox_list.pop(i)  # NMS去除冗余bbox
+                else:
+                    i += 1
+
+        return results
 
 class Detect_YOLO():
     def __init__(self, device, model_path, config_params,logger):
         self.model = YoloFastest(config_params["io_params"]).to(device).eval()
         net_param = torch.load(model_path, map_location=device)
         self.model.load_state_dict(net_param)  # 导入模型参数
-
-        pred_branch = len(config_params["io_params"]["strides"])  # 预测分支
-        self.model_loss = []  # 使用loss类中的函数，对预测结果进行坐标还原
-        for i in range(pred_branch):
-            self.model_loss.append(YOLOLossV3(anchors=config_params["io_params"]["anchors"][i],
-                                         num_classes=config_params["io_params"]["num_cls"],
-                                         img_size=config_params["io_params"]["input_size"], device=device))
-        self.class_names = config_params["io_params"]["class_names"]
+        self.logger = logger
         self.device = device
-        self.config_params = config_params
+
+        self.class_names = config_params["io_params"]["class_names"]
+        self.num_cls = config_params["io_params"]["num_cls"]
         self.nms_thres = config_params["io_params"]["nms_thre"]
         self.conf_thres = config_params["io_params"]["conf_thre"]
-        self.target_shape = config_params["io_params"]["input_size"][0:2]  # 网络输入图像的目标尺寸
-        self.logger = logger
+        self.input_shape = config_params["io_params"]["input_shape"]  # 网络的输入图像尺寸
+        self.origin_img_shape = config_params["io_params"]["origin_img_shape"]  # 数据集原始图片尺寸
+        self.post_process = YOLO_post_process(conf_thres=self.conf_thres, nms_thres=self.nms_thres,
+                                              num_anchors=config_params["io_params"]["num_anchors"],
+                                              anchors=config_params["io_params"]["anchors"],
+                                              input_shape=self.input_shape, num_class=self.num_cls)
         self.colors = [[106, 90, 205], [199, 97, 20], [112, 128, 105]]
+
+    def __pre_process(self, img_path):
+        ori_img = cv2.imread(img_path)  # BGR格式读入
+
+        if self.input_shape[2] == 1 and self.origin_img_shape[2] != 1:  # 网络要求单通道输入
+            img = cv2.cvtColor(ori_img, cv2.COLOR_BGR2GRAY)
+        else:
+            img = ori_img  # 深度拷贝，不会影响原图
+
+        if self.input_shape[0:2] != self.origin_img_shape[0:2]:  # 输入图片大小调整至满足网络要求
+            img = cv2.resize(img, (self.input_shape[1], self.input_shape[0]))
+
+        if self.input_shape[2] == 1:
+            img = np.expand_dims(img, -1)  # 对于灰度图，在最后多加一个维度，shape变为【h,w,1】
+
+        img = img[:, :, ::-1].copy().transpose(2, 0, 1)  # （h,w,chanel）->(chanel,h,w)
+        img = np.ascontiguousarray(img)
+        img = torch.from_numpy(img).to(self.device).float()
+        img = (img - 128.0) / 255.0  # 归一化
+
+        if img.ndimension() == 3:
+            img = img.unsqueeze(0)  # 最外层加一个维度->[1,h,w,1]
+
+        return img, ori_img
+
+    def __adjust_coord(self, all_bbox_rects):
+        scale_h = self.origin_img_shape[0]/self.input_shape[0] # 原始图像和网络输入图像的高度放缩倍数
+        scale_w = self.origin_img_shape[1]/self.input_shape[1] # 原始图像和网络输入图像的宽度放缩倍数
+
+        for i in range(len(all_bbox_rects)):
+            all_bbox_rects[i][0] = round(all_bbox_rects[i][0] * scale_w)
+            all_bbox_rects[i][2] = round(all_bbox_rects[i][2] * scale_w)
+            all_bbox_rects[i][1] = round(all_bbox_rects[i][1] * scale_h)
+            all_bbox_rects[i][3] = round(all_bbox_rects[i][3] * scale_h)
 
     def batch_detect(self, root_path, result_path):
         with torch.no_grad():
@@ -38,99 +142,62 @@ class Detect_YOLO():
             avg_time = 0  # 记录检测平均用时
             for filename in img_list:
                 img_path = os.path.join(root_path, filename)  # 每张图片的路径
-                img_origin = cv2.imread(img_path)
-                img_gray = cv2.cvtColor(img_origin, cv2.COLOR_BGR2GRAY)
+                img, ori_img = self.__pre_process(img_path=img_path)  # 图片预处理，调整格式
 
-                # resize to target shape
-                if img_origin.shape[0:2] == tuple(self.target_shape):
-                    img = img_gray  # 假如shape一样可以跳过
-                else:
-                    img = self.__resize_img(img_gray, new_shape=self.target_shape)
-
-                # pre-processing
-                img = np.expand_dims(img, -1)  # 在最后增加一个维度
-                img = img[:, :, ::-1].copy().transpose(2, 0, 1)  # （h,w,1）->(1,h,w)
-                img = np.ascontiguousarray(img)
-                img = torch.from_numpy(img).to(self.device).float()
-                img = (img - 128.0) / 255.0  # 归一化
-
-                if img.ndimension() == 3:
-                    img = img.unsqueeze(0)  # 最外层加一个维度->[1,h,w,1]
-
+                # 网路推理
                 start_time = time.time()
                 pred = self.model(img)
                 time_mark = time.time()
                 infer_time = float(time_mark - start_time) * 1000  # 推理时间
 
-                output_list = []
-                for i, item_pred in enumerate(pred):  # 获取不同尺度的预测结果
-                    output_list.append(self.model_loss[i](item_pred))  # 返回的是predict出来的所有bounding box（已反向还原）
-                output = torch.cat(output_list, 1)  # 不同尺度的边界框合在一起
-                output = non_max_suppression(output, config_params["io_params"]["num_cls"],
-                                             conf_thres=self.conf_thres, nms_thres=self.nms_thres)
-
-                output = output[0]  # 一次只处理一张图，所以只取第一个
-                post_process_time = float(time.time()-time_mark)*1000  # 后处理用时
-                total_time = post_process_time + infer_time
+                # 后处理
+                all_bbox_rects = self.post_process.decode_box(pred)  # 解码，获取所有有效边界框
+                bbox_rects_class = [[] for i in range(self.num_cls)]
+                for bbox in all_bbox_rects:
+                    bbox_rects_class[bbox[-1]].append(bbox)  # 按类别分开存储
+                all_bbox_rects.clear()
+                for cls in range(self.num_cls):  # 每一类单独做NMS
+                    if len(bbox_rects_class[cls]) == 0:
+                        continue
+                    def __get_conf(item):
+                        return item[4]
+                    bbox_rects_class[cls].sort(key=__get_conf, reverse=True)  # 根据置信度降序排列
+                    results = self.post_process.non_maxium_supression(bbox_rects_class[cls])  # NMS
+                    all_bbox_rects.extend(results)
+                post_process_time = float(time.time() - time_mark) * 1000
+                total_time = infer_time + post_process_time
                 avg_time += total_time
 
-                if output is None:
-                    cv2.imwrite(os.path.join(result_path, 'result_'+filename), img_origin)  # 保存结果
+                # 无检测结果下的日志记录
+                if len(all_bbox_rects) == 0:
+                    cv2.imwrite(os.path.join(result_path, 'result_'+filename), ori_img)  # 保存结果
                     self.logger.info("image_name:%s -> no targets, infer time:%.2fms, post_process time:%.2fms, total time:%.2fms" % (filename, infer_time, post_process_time, total_time))
                     continue
 
-                if img_origin.shape[0:2] != tuple(self.target_shape):
-                    self.logger.info("adjust coordiantes")  # 坐标调整，从网络输入图片尺寸调整到实际图片尺寸
-                    output[:, :4] = scale_coords(img.shape[1:3], output[:, :4], img_origin.shape).round()  # 这个函数有问题
+                # 坐标调整
+                if self.input_shape[0:2] != self.origin_img_shape[0:2]:  # bbox坐标调整，从网络输入图片坐标系调整到实际图片坐标系
+                    self.__adjust_coord(all_bbox_rects)
 
                 # 画框
-                for *xyxy, conf, cls_score, cls_pred in reversed(output):
+                for *xyxy, conf, cls_score, cls_pred in all_bbox_rects:
                     label = '%s %.2f' % (self.class_names[int(cls_pred)], conf*cls_score)  # conf*cls_score为类别目标置信度
-                    plot_one_box(xyxy, img_origin, label=label, color=self.colors[int(cls_pred)], line_thickness=3)
+                    plot_one_box(xyxy, ori_img, label=label, color=self.colors[int(cls_pred)], line_thickness=3)
 
-                if os.path.exists(result_path) is False:
-                    os.makedirs(result_path)
-
-                cv2.imwrite(os.path.join(result_path, 'result_'+filename), img_origin)  # 保存结果
+                cv2.imwrite(os.path.join(result_path, 'result_'+filename), ori_img)  # 保存结果
                 self.logger.info("image_name:%s -> detect finished, infer time:%.2fms, post_process time:%.2fms, total time:%.2fms" % (filename, infer_time, post_process_time, total_time))
 
             self.logger.info("detect avg_time: %.2fms" % (avg_time/num))
 
-    def __resize_img(self, img0, new_shape, color=128):
-        '''
-        保持原图的宽高比进行调整至目标图像尺寸, 两边填充（缩放的是宽或者高，取最接近的那个）
-        和DetectDataset重load rect处理方式一样
-        :param img0: 输入待处理原图
-        :param new_shape: 目标尺寸
-        :param color: 填充颜色
-        :return: 处理后的图像
-        '''
-        shape = img0.shape[:2]
-        r = min(new_shape[0] / shape[0], new_shape[1] / shape[1])
-
-        unpad_shape = int(round(shape[1] * r)), int(round(shape[0] * r))
-        dw, dh = new_shape[1] - unpad_shape[0], new_shape[0] - unpad_shape[1]  # wh padding
-
-        img = cv2.resize(img0, unpad_shape, interpolation=cv2.INTER_LINEAR)
-
-        dw, dh = dw / 2, dh / 2
-        top, bottom = int(round(dh - 0.1)), int(round(dh + 0.1))
-        left, right = int(round(dw - 0.1)), int(round(dw + 0.1))
-        img = cv2.copyMakeBorder(img, top, bottom, left, right, cv2.BORDER_CONSTANT, value=color)
-
-        return img
-
-
 
 if __name__ == '__main__':
-    logger = config_logger(log_dir='E:\Graduate_Design\YOLO-Fastest\\test_result',
+    logger = config_logger(log_dir='E:\Graduate_Design\YOLO-Fastest\\test_result\\256x320',
                               log_name='cpu-test.log', tensorboard=False)  # 加载日志模块
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # 设备选择
-    detect = Detect_YOLO(device, model_path="E:\Graduate_Design\YOLO-Fastest\models\pytorch\YOLO-Fastest_epoch_27.pth",
+    detect = Detect_YOLO(device, model_path="E:\Graduate_Design\YOLO-Fastest\models\pytorch\\256x320\YOLO-Fastest_epoch_28.pth",
                          config_params=config_params, logger=logger)
     detect.batch_detect(root_path="E:\Graduate_Design\YOLO-Fastest\\test_data",
-                        result_path="E:\Graduate_Design\YOLO-Fastest\\test_result")
+                        result_path="E:\Graduate_Design\YOLO-Fastest\\test_result\\256x320")
 
 
 
