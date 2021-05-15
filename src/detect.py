@@ -81,6 +81,7 @@ class YOLO_post_process:
 
         return results
 
+
 class Detect_YOLO():
     def __init__(self, device, model_path, config_params,logger):
         self.model = YoloFastest(config_params["io_params"]).to(device).eval()
@@ -135,13 +136,13 @@ class Detect_YOLO():
             all_bbox_rects[i][1] = round(all_bbox_rects[i][1] * scale_h)
             all_bbox_rects[i][3] = round(all_bbox_rects[i][3] * scale_h)
 
-    def batch_detect(self, root_path, result_path):
+    def batch_detect(self, data_path, result_path):
         with torch.no_grad():
-            img_list = os.listdir(root_path)
+            img_list = os.listdir(data_path)
             num = len(img_list)  # 待检测图片总数
             avg_time = 0  # 记录检测平均用时
             for filename in img_list:
-                img_path = os.path.join(root_path, filename)  # 每张图片的路径
+                img_path = os.path.join(data_path, filename)  # 每张图片的路径
                 img, ori_img = self.__pre_process(img_path=img_path)  # 图片预处理，调整格式
 
                 # 网路推理
@@ -196,7 +197,7 @@ if __name__ == '__main__':
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # 设备选择
     detect = Detect_YOLO(device, model_path="E:\Graduate_Design\YOLO-Fastest\models\pytorch\\256x320\YOLO-Fastest_epoch_28.pth",
                          config_params=config_params, logger=logger)
-    detect.batch_detect(root_path="E:\Graduate_Design\YOLO-Fastest\\test_data",
+    detect.batch_detect(data_path="E:\Graduate_Design\YOLO-Fastest\\test_data",
                         result_path="E:\Graduate_Design\YOLO-Fastest\\test_result\\256x320")
 
 

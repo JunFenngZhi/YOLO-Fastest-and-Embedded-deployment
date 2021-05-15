@@ -13,31 +13,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/detect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="304">
+              <caret line="189" column="72" lean-forward="true" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#347#3291#0" />
-                <element signature="e#3318#8854#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model_training/utils/general.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
-              <folding>
-                <element signature="e#23#33#0" expanded="true" />
-                <element signature="e#104#427#0" />
-                <element signature="e#452#777#0" />
-                <element signature="e#836#1868#0" />
-                <element signature="e#1910#2160#0" />
+                <element signature="e#725#756#0" />
+                <element signature="e#817#1241#0" />
+                <element signature="e#1283#2736#0" />
+                <element signature="e#3319#8855#0" />
+                <element signature="e#3389#4537#0" />
+                <element signature="e#4586#5455#0" />
+                <element signature="e#5511#6008#0" />
+                <element signature="e#6070#8855#0" />
               </folding>
             </state>
           </provider>
@@ -47,7 +38,31 @@
         <entry file="file://$PROJECT_DIR$/src/model_training/_config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="11" column="68" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="68" />
+              <caret line="11" column="29" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model_deployment/rknn_deploy/rknn_deploy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="188" column="42" lean-forward="true" selection-start-line="188" selection-start-column="42" selection-end-line="188" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#434#775#0" />
+                <element signature="e#879#1840#0" />
+                <element signature="e#1920#2689#0" />
+                <element signature="e#2343#2840#0" />
+                <element signature="e#2365#5309#0" />
+                <element signature="e#2835#3259#0" />
+                <element signature="e#3301#4754#0" />
+                <element signature="e#4812#5309#0" />
+                <element signature="e#6992#9631#0" />
+                <element signature="e#7860#8199#0" />
+                <element signature="e#8461#8769#0" />
+                <element signature="e#9117#9333#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,15 +125,15 @@
         <option value="$PROJECT_DIR$/src/utils/general.py" />
         <option value="$PROJECT_DIR$/src/model_deployment/convert_model/pytorch_to_caffe.py" />
         <option value="$PROJECT_DIR$/src/model_deployment/convert_model/pytorch_to_onnx.py" />
-        <option value="$PROJECT_DIR$/src/model_deployment/rknn_deploy/rknn_deploy.py" />
         <option value="$PROJECT_DIR$/src/model_training/train.py" />
-        <option value="$PROJECT_DIR$/src/model_training/loss/yolo_loss.py" />
         <option value="$PROJECT_DIR$/src/model_training/validate.py" />
-        <option value="$PROJECT_DIR$/src/model_training/model/yolo_fastest.py" />
         <option value="$PROJECT_DIR$/src/model_training/_config.py" />
         <option value="$PROJECT_DIR$/src/model_training/dataloader/detect_dataset.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+        <option value="$PROJECT_DIR$/src/model_training/loss/yolo_loss.py" />
+        <option value="$PROJECT_DIR$/src/model_training/model/yolo_fastest.py" />
         <option value="$PROJECT_DIR$/src/model_training/utils/general.py" />
+        <option value="$PROJECT_DIR$/src/model_deployment/rknn_deploy/rknn_deploy.py" />
         <option value="$PROJECT_DIR$/src/detect.py" />
       </list>
     </option>
@@ -146,6 +161,12 @@
               <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
               <item name="YOLO-Fastest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YOLO-Fastest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model_training" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
@@ -318,7 +339,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.20833333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.20833333" />
       <window_info id="Structure" order="1" sideWeight="0.501548" side_tool="true" weight="0.17559524" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -476,24 +497,6 @@
     <entry file="file://$PROJECT_DIR$/src/loss/yolo_loss.py" />
     <entry file="file://$PROJECT_DIR$/src/utils/general.py" />
     <entry file="file://$PROJECT_DIR$/src/_config.py" />
-    <entry file="file://$PROJECT_DIR$/src/model_training/utils/pytorch_to_caffe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399">
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_training/utils/txt2xml.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model_deployment/convert_model/pytorch_to_caffe.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -539,16 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_deployment/rknn_deploy/rknn_deploy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="70" column="61" lean-forward="true" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/321121572/cv2/cv2/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -559,54 +552,10 @@
     <entry file="file://$PROJECT_DIR$/src/model_training/dataloader/test_o.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_training/validate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="42" column="44" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_training/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="38" />
-          <folding>
-            <element signature="e#534#1197#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_training/model/yolo_fastest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-437">
-          <caret line="196" column="8" lean-forward="true" selection-start-line="196" selection-start-column="8" selection-end-line="196" selection-end-column="8" />
-          <folding>
-            <element signature="e#23#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/321121572/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="2932" column="8" selection-start-line="2932" selection-start-column="8" selection-end-line="2932" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_training/loss/yolo_loss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="428" column="43" selection-start-line="428" selection-start-column="43" selection-end-line="428" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#162#1975#0" />
-            <element signature="e#2016#2196#0" />
-            <element signature="e#2283#2451#0" />
-            <element signature="e#2627#12046#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -626,18 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_training/dataloader/detect_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#564#1227#0" />
-            <element signature="e#1260#1368#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -649,28 +586,84 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_result/cpu-test.log" />
-    <entry file="file://$PROJECT_DIR$/src/detect.py">
+    <entry file="file://$PROJECT_DIR$/src/model_training/dataloader/detect_dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="1843">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#347#3291#0" />
-            <element signature="e#3318#8854#0" />
+            <element signature="e#564#1227#0" />
+            <element signature="e#1260#1368#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_training/utils/general.py">
+    <entry file="file://$PROJECT_DIR$/src/model_training/loss/yolo_loss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="304">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
-            <element signature="e#23#33#0" expanded="true" />
-            <element signature="e#104#427#0" />
-            <element signature="e#452#777#0" />
-            <element signature="e#836#1868#0" />
-            <element signature="e#1910#2160#0" />
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#2016#2196#0" />
+            <element signature="e#2228#2251#0" />
+            <element signature="e#2283#2451#0" />
+            <element signature="e#12081#21065#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model_training/model/yolo_fastest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="387" lean-forward="true" selection-start-line="387" selection-end-line="387" />
+          <folding>
+            <element signature="e#23#35#0" expanded="true" />
+            <element signature="e#97#217#0" />
+            <element signature="e#440#882#0" />
+            <element signature="e#1000#1309#0" />
+            <element signature="e#1443#1687#0" />
+            <element signature="e#1737#2301#0" />
+            <element signature="e#2338#8648#0" />
+            <element signature="e#8690#14058#0" />
+            <element signature="e#14367#14790#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model_training/utils/pytorch_to_caffe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-456">
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model_training/utils/txt2xml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model_training/validate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="42" column="44" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model_training/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding>
+            <element signature="e#534#1197#0" />
           </folding>
         </state>
       </provider>
@@ -678,7 +671,65 @@
     <entry file="file://$PROJECT_DIR$/src/model_training/_config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="68" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="68" />
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model_training/utils/general.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#23#33#0" expanded="true" />
+            <element signature="e#104#427#0" />
+            <element signature="e#452#777#0" />
+            <element signature="e#836#1868#0" />
+            <element signature="e#2279#3079#0" />
+            <element signature="e#3160#3246#0" />
+            <element signature="e#3248#3596#1" />
+            <element signature="e#3682#6472#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/detect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="189" column="72" lean-forward="true" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#347#3291#0" />
+            <element signature="e#725#756#0" />
+            <element signature="e#817#1241#0" />
+            <element signature="e#1283#2736#0" />
+            <element signature="e#3319#8855#0" />
+            <element signature="e#3389#4537#0" />
+            <element signature="e#4586#5455#0" />
+            <element signature="e#5511#6008#0" />
+            <element signature="e#6070#8855#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model_deployment/rknn_deploy/rknn_deploy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="188" column="42" lean-forward="true" selection-start-line="188" selection-start-column="42" selection-end-line="188" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#434#775#0" />
+            <element signature="e#879#1840#0" />
+            <element signature="e#1920#2689#0" />
+            <element signature="e#2343#2840#0" />
+            <element signature="e#2365#5309#0" />
+            <element signature="e#2835#3259#0" />
+            <element signature="e#3301#4754#0" />
+            <element signature="e#4812#5309#0" />
+            <element signature="e#6992#9631#0" />
+            <element signature="e#7860#8199#0" />
+            <element signature="e#8461#8769#0" />
+            <element signature="e#9117#9333#0" />
+          </folding>
         </state>
       </provider>
     </entry>

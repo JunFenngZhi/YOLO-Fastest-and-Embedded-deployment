@@ -52,14 +52,6 @@ def bbox_iou(box1, box2, x1y1x2y2=True):
     return iou
 
 
-def clip_coords(boxes, img_shape):
-    # Clip bounding xyxy bounding boxes to image shape (height, width)
-    boxes[:, 0].clamp_(0, img_shape[1])  # x1
-    boxes[:, 1].clamp_(0, img_shape[0])  # y1
-    boxes[:, 2].clamp_(0, img_shape[1])  # x2
-    boxes[:, 3].clamp_(0, img_shape[0])  # y2
-
-
 # Plots one bounding box on image img
 def plot_one_box(xyxy, img, color=None, label=None, line_thickness=None):
     # 调节tf,tl可以控制边框和字体粗细
@@ -90,6 +82,7 @@ def del_tensor_element(arr, index):
 5、去掉IOU>NMS_threshold的那些结果  重复上述步骤直到该类别没有剩余边界框
 6、返回每个图片所有类别的NMS处理后的检测结果。每个检测结果存储形式为(x1, y1, x2, y2, object_conf, class_score, class_pred)
 注： class_pred值对应的类别和数据集导入时数组下标对应的类别一致
+调用了pytorch库函数，在训练过程中的validate使用
 '''
 def non_max_suppression(prediction, num_classes,conf_thres=0.5, nms_thres=0.4):
 

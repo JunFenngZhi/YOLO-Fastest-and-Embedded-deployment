@@ -3,12 +3,11 @@ import torch
 import torch.nn as nn
 
 
-
-
 def group_norm(out_channels):
     assert out_channels % 16 == 0
     num = 32  if out_channels % 32 == 0 else 16
     return nn.GroupNorm(num, out_channels)
+
 
 norm_dict = {"BN": nn.BatchNorm2d, "GN": group_norm}
 norm_func = norm_dict["BN"]
@@ -26,6 +25,7 @@ def conv_norm_relu(in_channels, out_channels, kernel_size=3, stride=1, padding=N
         nn.ReLU(inplace=False)  # inplace为True，将会改变输入的数据。即修改原输入
     )
 
+
 def conv_norm(in_channels, out_channels, kernel_size=3, stride=1, padding=None, groups=1, norm_func=norm_func):
     if padding is None:
         assert kernel_size % 2 != 0
@@ -37,6 +37,7 @@ def conv_norm(in_channels, out_channels, kernel_size=3, stride=1, padding=None, 
         norm_func(out_channels)
     )
 
+
 # 反卷积，两倍上采样
 def deconv_norm_relu(in_channels, out_channels, kernel_size=2, stride=2, padding=0, groups=1, norm_func=norm_func):
     return nn.Sequential(
@@ -45,6 +46,7 @@ def deconv_norm_relu(in_channels, out_channels, kernel_size=2, stride=2, padding
         norm_func(out_channels),
         nn.ReLU()
     )
+
 
 # 三个卷积层的残差块
 class BasicResBlock(nn.Module):
