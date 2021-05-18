@@ -1,73 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1e63c6c-966b-4fcf-838d-d317dcfc6a15" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/src/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/validate.py" afterDir="false" />
-    </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="a1e63c6c-966b-4fcf-838d-d317dcfc6a15" name="默认的" comment="默认的" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/detect.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="189" column="72" lean-forward="true" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#347#3291#0" />
-                <element signature="e#725#756#0" />
-                <element signature="e#817#1241#0" />
-                <element signature="e#1283#2736#0" />
-                <element signature="e#3319#8855#0" />
-                <element signature="e#3389#4537#0" />
-                <element signature="e#4586#5455#0" />
-                <element signature="e#5511#6008#0" />
-                <element signature="e#6070#8855#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model_training/_config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="29" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/model_deployment/rknn_deploy/rknn_deploy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="188" column="42" lean-forward="true" selection-start-line="188" selection-start-column="42" selection-end-line="188" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#434#775#0" />
-                <element signature="e#879#1840#0" />
-                <element signature="e#1920#2689#0" />
-                <element signature="e#2343#2840#0" />
-                <element signature="e#2365#5309#0" />
-                <element signature="e#2835#3259#0" />
-                <element signature="e#3301#4754#0" />
-                <element signature="e#4812#5309#0" />
-                <element signature="e#6992#9631#0" />
-                <element signature="e#7860#8199#0" />
-                <element signature="e#8461#8769#0" />
-                <element signature="e#9117#9333#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -105,6 +43,9 @@
       <find>conf_thres</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -124,16 +65,16 @@
         <option value="$PROJECT_DIR$/src/loss/yolo_loss.py" />
         <option value="$PROJECT_DIR$/src/utils/general.py" />
         <option value="$PROJECT_DIR$/src/model_deployment/convert_model/pytorch_to_caffe.py" />
-        <option value="$PROJECT_DIR$/src/model_deployment/convert_model/pytorch_to_onnx.py" />
         <option value="$PROJECT_DIR$/src/model_training/train.py" />
         <option value="$PROJECT_DIR$/src/model_training/validate.py" />
-        <option value="$PROJECT_DIR$/src/model_training/_config.py" />
         <option value="$PROJECT_DIR$/src/model_training/dataloader/detect_dataset.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$PROJECT_DIR$/src/model_training/loss/yolo_loss.py" />
         <option value="$PROJECT_DIR$/src/model_training/model/yolo_fastest.py" />
         <option value="$PROJECT_DIR$/src/model_training/utils/general.py" />
         <option value="$PROJECT_DIR$/src/model_deployment/rknn_deploy/rknn_deploy.py" />
+        <option value="$PROJECT_DIR$/src/model_deployment/convert_model/pytorch_to_onnx.py" />
+        <option value="$PROJECT_DIR$/src/model_training/_config.py" />
         <option value="$PROJECT_DIR$/src/detect.py" />
       </list>
     </option>
@@ -144,6 +85,7 @@
     <option name="width" value="699" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectId" id="1schmYD30AkAL14TFUxaZrQgZJz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -160,13 +102,20 @@
             <path>
               <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
               <item name="YOLO-Fastest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
               <item name="YOLO-Fastest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model_training" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="pytorch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YOLO-Fastest" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="pytorch" type="462c0819:PsiDirectoryNode" />
+              <item name="256x320" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="YOLO-Fastest" type="b2602c69:ProjectViewProjectNode" />
@@ -184,8 +133,16 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -193,18 +150,6 @@
       <recent name="E:\Graduate_Design\YOLO-Fastest\src\utils" />
       <recent name="E:\Graduate_Design\YOLO-Fastest\pretrained_model" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.detect">
     <configuration name="detect" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -316,12 +261,13 @@
       <list>
         <item itemvalue="Python.detect" />
         <item itemvalue="Python.scratch" />
-        <item itemvalue="Python.detect_dataset" />
         <item itemvalue="Python.pytorch_to_onnx (1)" />
+        <item itemvalue="Python.detect_dataset" />
         <item itemvalue="Python.pytorch_to_onnx" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -349,7 +295,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="运行" order="7" weight="0.5139116" />
+      <window_info anchor="bottom" id="运行" order="7" weight="0.3371522" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -532,16 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_deployment/convert_model/pytorch_to_onnx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/321121572/cv2/cv2/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -612,24 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_training/model/yolo_fastest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="387" lean-forward="true" selection-start-line="387" selection-end-line="387" />
-          <folding>
-            <element signature="e#23#35#0" expanded="true" />
-            <element signature="e#97#217#0" />
-            <element signature="e#440#882#0" />
-            <element signature="e#1000#1309#0" />
-            <element signature="e#1443#1687#0" />
-            <element signature="e#1737#2301#0" />
-            <element signature="e#2338#8648#0" />
-            <element signature="e#8690#14058#0" />
-            <element signature="e#14367#14790#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model_training/utils/pytorch_to_caffe.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-456">
@@ -668,13 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_training/_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model_training/utils/general.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -692,44 +603,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model_deployment/rknn_deploy/rknn_deploy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="188" column="42" selection-start-line="188" selection-start-column="42" selection-end-line="188" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model_training/model/yolo_fastest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="217" column="35" selection-start-line="217" selection-start-column="35" selection-end-line="217" selection-end-column="35" />
+          <folding>
+            <element signature="e#23#35#0" expanded="true" />
+            <element signature="e#1000#1309#0" />
+            <element signature="e#8692#14060#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model_deployment/convert_model/pytorch_to_onnx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/detect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="189" column="72" lean-forward="true" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
+        <state relative-caret-position="601">
+          <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#347#3291#0" />
             <element signature="e#725#756#0" />
             <element signature="e#817#1241#0" />
             <element signature="e#1283#2736#0" />
-            <element signature="e#3319#8855#0" />
             <element signature="e#3389#4537#0" />
-            <element signature="e#4586#5455#0" />
             <element signature="e#5511#6008#0" />
-            <element signature="e#6070#8855#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_deployment/rknn_deploy/rknn_deploy.py">
+    <entry file="file://$PROJECT_DIR$/src/model_training/_config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="188" column="42" lean-forward="true" selection-start-line="188" selection-start-column="42" selection-end-line="188" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#434#775#0" />
-            <element signature="e#879#1840#0" />
-            <element signature="e#1920#2689#0" />
-            <element signature="e#2343#2840#0" />
-            <element signature="e#2365#5309#0" />
-            <element signature="e#2835#3259#0" />
-            <element signature="e#3301#4754#0" />
-            <element signature="e#4812#5309#0" />
-            <element signature="e#6992#9631#0" />
-            <element signature="e#7860#8199#0" />
-            <element signature="e#8461#8769#0" />
-            <element signature="e#9117#9333#0" />
-          </folding>
+        <state relative-caret-position="228">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
         </state>
       </provider>
     </entry>

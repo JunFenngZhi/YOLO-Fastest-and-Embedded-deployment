@@ -1,0 +1,128 @@
+7767517
+126 146
+Input                    data                     0 1 data 0=320 1=256 2=1
+Convolution              Conv_0                   1 1 data 511 0=8 1=3 3=2 4=1 5=1 6=72 9=1
+Convolution              Conv_3                   1 1 511 514 0=8 1=1 5=1 6=64 9=1
+ConvolutionDepthWise     Conv_6                   1 1 514 517 0=8 1=3 4=1 5=1 6=72 7=8 9=1
+Convolution              Conv_9                   1 1 517 518 0=4 1=1 5=1 6=32
+Split                    splitncnn_0              1 2 518 518_splitncnn_0 518_splitncnn_1
+Convolution              Conv_11                  1 1 518_splitncnn_1 522 0=8 1=1 5=1 6=32 9=1
+ConvolutionDepthWise     Conv_14                  1 1 522 525 0=8 1=3 4=1 5=1 6=72 7=8 9=1
+Convolution              Conv_17                  1 1 525 526 0=4 1=1 5=1 6=32
+BinaryOp                 Add_19                   2 1 526 518_splitncnn_0 528
+Convolution              Conv_20                  1 1 528 531 0=24 1=1 5=1 6=96 9=1
+Convolution              Conv_23                  1 1 531 534 0=24 1=3 3=2 4=1 5=1 6=5184 9=1
+Convolution              Conv_26                  1 1 534 535 0=8 1=1 5=1 6=192
+Split                    splitncnn_1              1 2 535 535_splitncnn_0 535_splitncnn_1
+Convolution              Conv_28                  1 1 535_splitncnn_1 539 0=32 1=1 5=1 6=256 9=1
+ConvolutionDepthWise     Conv_31                  1 1 539 542 0=32 1=3 4=1 5=1 6=288 7=32 9=1
+Convolution              Conv_34                  1 1 542 543 0=8 1=1 5=1 6=256
+BinaryOp                 Add_36                   2 1 543 535_splitncnn_0 545
+Split                    splitncnn_2              1 2 545 545_splitncnn_0 545_splitncnn_1
+Convolution              Conv_37                  1 1 545_splitncnn_1 548 0=32 1=1 5=1 6=256 9=1
+ConvolutionDepthWise     Conv_40                  1 1 548 551 0=32 1=3 4=1 5=1 6=288 7=32 9=1
+Convolution              Conv_43                  1 1 551 552 0=8 1=1 5=1 6=256
+BinaryOp                 Add_45                   2 1 552 545_splitncnn_0 554
+Convolution              Conv_46                  1 1 554 557 0=32 1=1 5=1 6=256 9=1
+ConvolutionDepthWise     Conv_49                  1 1 557 560 0=32 1=3 3=2 4=1 5=1 6=288 7=32 9=1
+Convolution              Conv_52                  1 1 560 561 0=8 1=1 5=1 6=256
+Split                    splitncnn_3              1 2 561 561_splitncnn_0 561_splitncnn_1
+Convolution              Conv_54                  1 1 561_splitncnn_1 565 0=48 1=1 5=1 6=384 9=1
+ConvolutionDepthWise     Conv_57                  1 1 565 568 0=48 1=3 4=1 5=1 6=432 7=48 9=1
+Convolution              Conv_60                  1 1 568 569 0=8 1=1 5=1 6=384
+BinaryOp                 Add_62                   2 1 569 561_splitncnn_0 571
+Split                    splitncnn_4              1 2 571 571_splitncnn_0 571_splitncnn_1
+Convolution              Conv_63                  1 1 571_splitncnn_1 574 0=48 1=1 5=1 6=384 9=1
+ConvolutionDepthWise     Conv_66                  1 1 574 577 0=48 1=3 4=1 5=1 6=432 7=48 9=1
+Convolution              Conv_69                  1 1 577 578 0=8 1=1 5=1 6=384
+BinaryOp                 Add_71                   2 1 578 571_splitncnn_0 580
+Convolution              Conv_72                  1 1 580 583 0=48 1=1 5=1 6=384 9=1
+ConvolutionDepthWise     Conv_75                  1 1 583 586 0=48 1=3 4=1 5=1 6=432 7=48 9=1
+Convolution              Conv_78                  1 1 586 587 0=16 1=1 5=1 6=768
+Split                    splitncnn_5              1 2 587 587_splitncnn_0 587_splitncnn_1
+Convolution              Conv_80                  1 1 587_splitncnn_1 591 0=96 1=1 5=1 6=1536 9=1
+ConvolutionDepthWise     Conv_83                  1 1 591 594 0=96 1=3 4=1 5=1 6=864 7=96 9=1
+Convolution              Conv_86                  1 1 594 595 0=16 1=1 5=1 6=1536
+BinaryOp                 Add_88                   2 1 595 587_splitncnn_0 597
+Split                    splitncnn_6              1 2 597 597_splitncnn_0 597_splitncnn_1
+Convolution              Conv_89                  1 1 597_splitncnn_1 600 0=96 1=1 5=1 6=1536 9=1
+ConvolutionDepthWise     Conv_92                  1 1 600 603 0=96 1=3 4=1 5=1 6=864 7=96 9=1
+Convolution              Conv_95                  1 1 603 604 0=16 1=1 5=1 6=1536
+BinaryOp                 Add_97                   2 1 604 597_splitncnn_0 606
+Split                    splitncnn_7              1 2 606 606_splitncnn_0 606_splitncnn_1
+Convolution              Conv_98                  1 1 606_splitncnn_1 609 0=96 1=1 5=1 6=1536 9=1
+ConvolutionDepthWise     Conv_101                 1 1 609 612 0=96 1=3 4=1 5=1 6=864 7=96 9=1
+Convolution              Conv_104                 1 1 612 613 0=16 1=1 5=1 6=1536
+BinaryOp                 Add_106                  2 1 613 606_splitncnn_0 615
+Split                    splitncnn_8              1 2 615 615_splitncnn_0 615_splitncnn_1
+Convolution              Conv_107                 1 1 615_splitncnn_1 618 0=96 1=1 5=1 6=1536 9=1
+ConvolutionDepthWise     Conv_110                 1 1 618 621 0=96 1=3 4=1 5=1 6=864 7=96 9=1
+Convolution              Conv_113                 1 1 621 622 0=16 1=1 5=1 6=1536
+BinaryOp                 Add_115                  2 1 622 615_splitncnn_0 624
+Convolution              Conv_116                 1 1 624 627 0=96 1=1 5=1 6=1536 9=1
+ConvolutionDepthWise     Conv_119                 1 1 627 630 0=96 1=3 3=2 4=1 5=1 6=864 7=96 9=1
+Convolution              Conv_122                 1 1 630 631 0=24 1=1 5=1 6=2304
+Split                    splitncnn_9              1 2 631 631_splitncnn_0 631_splitncnn_1
+Convolution              Conv_124                 1 1 631_splitncnn_1 635 0=136 1=1 5=1 6=3264 9=1
+ConvolutionDepthWise     Conv_127                 1 1 635 638 0=136 1=3 4=1 5=1 6=1224 7=136 9=1
+Convolution              Conv_130                 1 1 638 639 0=24 1=1 5=1 6=3264
+BinaryOp                 Add_132                  2 1 639 631_splitncnn_0 641
+Split                    splitncnn_10             1 2 641 641_splitncnn_0 641_splitncnn_1
+Convolution              Conv_133                 1 1 641_splitncnn_1 644 0=136 1=1 5=1 6=3264 9=1
+ConvolutionDepthWise     Conv_136                 1 1 644 647 0=136 1=3 4=1 5=1 6=1224 7=136 9=1
+Convolution              Conv_139                 1 1 647 648 0=24 1=1 5=1 6=3264
+BinaryOp                 Add_141                  2 1 648 641_splitncnn_0 650
+Split                    splitncnn_11             1 2 650 650_splitncnn_0 650_splitncnn_1
+Convolution              Conv_142                 1 1 650_splitncnn_1 653 0=136 1=1 5=1 6=3264 9=1
+ConvolutionDepthWise     Conv_145                 1 1 653 656 0=136 1=3 4=1 5=1 6=1224 7=136 9=1
+Convolution              Conv_148                 1 1 656 657 0=24 1=1 5=1 6=3264
+BinaryOp                 Add_150                  2 1 657 650_splitncnn_0 659
+Split                    splitncnn_12             1 2 659 659_splitncnn_0 659_splitncnn_1
+Convolution              Conv_151                 1 1 659_splitncnn_1 662 0=136 1=1 5=1 6=3264 9=1
+ConvolutionDepthWise     Conv_154                 1 1 662 665 0=136 1=3 4=1 5=1 6=1224 7=136 9=1
+Convolution              Conv_157                 1 1 665 666 0=24 1=1 5=1 6=3264
+BinaryOp                 Add_159                  2 1 666 659_splitncnn_0 668
+Convolution              Conv_160                 1 1 668 671 0=136 1=1 5=1 6=3264 9=1
+Split                    splitncnn_13             1 2 671 671_splitncnn_0 671_splitncnn_1
+ConvolutionDepthWise     Conv_163                 1 1 671_splitncnn_1 674 0=136 1=3 3=2 4=1 5=1 6=1224 7=136 9=1
+Convolution              Conv_166                 1 1 674 677 0=48 1=1 5=1 6=6528 9=1
+Split                    splitncnn_14             1 2 677 677_splitncnn_0 677_splitncnn_1
+Convolution              Conv_169                 1 1 677_splitncnn_1 680 0=224 1=1 5=1 6=10752 9=1
+ConvolutionDepthWise     Conv_172                 1 1 680 683 0=224 1=3 4=1 5=1 6=2016 7=224 9=1
+Convolution              Conv_175                 1 1 683 684 0=48 1=1 5=1 6=10752
+BinaryOp                 Add_177                  2 1 684 677_splitncnn_0 686
+Split                    splitncnn_15             1 2 686 686_splitncnn_0 686_splitncnn_1
+Convolution              Conv_178                 1 1 686_splitncnn_1 689 0=224 1=1 5=1 6=10752 9=1
+ConvolutionDepthWise     Conv_181                 1 1 689 692 0=224 1=3 4=1 5=1 6=2016 7=224 9=1
+Convolution              Conv_184                 1 1 692 693 0=48 1=1 5=1 6=10752
+BinaryOp                 Add_186                  2 1 693 686_splitncnn_0 695
+Split                    splitncnn_16             1 2 695 695_splitncnn_0 695_splitncnn_1
+Convolution              Conv_187                 1 1 695_splitncnn_1 698 0=224 1=1 5=1 6=10752 9=1
+ConvolutionDepthWise     Conv_190                 1 1 698 701 0=224 1=3 4=1 5=1 6=2016 7=224 9=1
+Convolution              Conv_193                 1 1 701 702 0=48 1=1 5=1 6=10752
+BinaryOp                 Add_195                  2 1 702 695_splitncnn_0 704
+Split                    splitncnn_17             1 2 704 704_splitncnn_0 704_splitncnn_1
+Convolution              Conv_196                 1 1 704_splitncnn_1 707 0=224 1=1 5=1 6=10752 9=1
+ConvolutionDepthWise     Conv_199                 1 1 707 710 0=224 1=3 4=1 5=1 6=2016 7=224 9=1
+Convolution              Conv_202                 1 1 710 711 0=48 1=1 5=1 6=10752
+BinaryOp                 Add_204                  2 1 711 704_splitncnn_0 713
+Split                    splitncnn_18             1 2 713 713_splitncnn_0 713_splitncnn_1
+Convolution              Conv_205                 1 1 713_splitncnn_1 716 0=224 1=1 5=1 6=10752 9=1
+ConvolutionDepthWise     Conv_208                 1 1 716 719 0=224 1=3 4=1 5=1 6=2016 7=224 9=1
+Convolution              Conv_211                 1 1 719 720 0=48 1=1 5=1 6=10752
+BinaryOp                 Add_213                  2 1 720 713_splitncnn_0 722
+Convolution              Conv_214                 1 1 722 725 0=96 1=1 5=1 6=4608 9=1
+Split                    splitncnn_19             1 2 725 725_splitncnn_0 725_splitncnn_1
+ConvolutionDepthWise     Conv_217                 1 1 725_splitncnn_1 728 0=96 1=5 4=2 5=1 6=2400 7=96 9=1
+Convolution              Conv_220                 1 1 728 729 0=128 1=1 5=1 6=12288
+ConvolutionDepthWise     Conv_222                 1 1 729 733 0=128 1=5 4=2 5=1 6=3200 7=128 9=1
+Convolution              Conv_225                 1 1 733 734 0=128 1=1 5=1 6=16384
+Convolution              Conv_227                 1 1 734 head_small 0=24 1=1 5=1 6=3072
+Deconvolution            ConvTranspose_228        1 1 725_splitncnn_0 739 0=96 1=2 3=2 5=1 6=36864 9=1
+Concat                   Concat_231               2 1 671_splitncnn_0 739 740
+Convolution              Conv_232                 1 1 740 743 0=96 1=1 5=1 6=22272 9=1
+ConvolutionDepthWise     Conv_235                 1 1 743 746 0=96 1=5 4=2 5=1 6=2400 7=96 9=1
+Convolution              Conv_238                 1 1 746 747 0=96 1=1 5=1 6=9216
+ConvolutionDepthWise     Conv_240                 1 1 747 751 0=96 1=5 4=2 5=1 6=2400 7=96 9=1
+Convolution              Conv_243                 1 1 751 752 0=96 1=1 5=1 6=9216
+Convolution              Conv_245                 1 1 752 head_large 0=24 1=1 5=1 6=2304

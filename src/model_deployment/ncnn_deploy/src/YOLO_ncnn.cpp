@@ -3,9 +3,9 @@
 #include <omp.h>
 
 
-Detect_YOLO::Detect_YOLO(const char* paramPath, const char* binPath, const vector<int>&img_size, 
+Detect_YOLO::Detect_YOLO(const char* paramPath, const char* binPath, const vector<int>&input_shape,
 	int num_class, float conf_thres, float nms_thres, const vector<vector<float>>&anchors):conf_thres(conf_thres),
-	img_size(img_size),num_class(num_class),anchors(anchors),nms_thres(nms_thres)
+	input_shape(input_shape),num_class(num_class),anchors(anchors),nms_thres(nms_thres)
 {
 	net.opt.use_packing_layout = true;
 	net.opt.use_bf16_storage = true;
@@ -29,9 +29,20 @@ void Detect_YOLO::detect(const cv::Mat& ori_img, vector<BBoxRect>& all_bbox_rect
 	extractor.set_num_threads(NUMTHREADS);    //设置运行线程数
 
 	//输入图片预处理
-	cv::Mat img_grey;
-	cvtColor(ori_img, img_grey, CV_BGR2GRAY);
-	ncnn::Mat in = ncnn::Mat::from_pixels(img_grey.data, ncnn::Mat::PIXEL_GRAY, img_grey.cols, img_grey.rows);
+	cv::Mat input_img;
+	if (input_shape[2] == 1 && ori_img.channels() != 1)   //网络要求单通道输入而原图为三通道彩色，则转换
+	{  
+		cvtColor(ori_img, input_img, CV_BGR2GRAY);
+	}
+	else 
+	{
+		input_img = ori_img.clone();
+	}
+	if (input_img.rows != input_shape[0] || input_img.cols != input_shape[1])  //数据集图像尺寸和网络输入图像尺寸不同
+	{ 
+		cv::resize(input_img,input_img,cv::Size(input_shape[1],input_shape[0]));
+	}
+	ncnn::Mat in = ncnn::Mat::from_pixels(input_img.data, ncnn::Mat::PIXEL_GRAY, input_img.cols, input_img.rows);
 	float mean[1] = { 128.f };
 	float norm[1] = { 1 / 255.f };
 	in.substract_mean_normalize(mean, norm);  //输入图像减去均值，并乘以归一化系数。
@@ -78,8 +89,8 @@ int Detect_YOLO::decode_bbox(const vector<ncnn::Mat>& pred, vector<BBoxRect>& al
 		int w = pred[b].w;  
 		int h = pred[b].h;
 		int channel = pred[b].c;
-		float scale_h = img_size[0] / h; //高度上的输出特征图缩小倍数
-		float scale_w = img_size[1] / w; //宽度上的输出特征图缩小倍数
+		float scale_h = input_shape[0] / h; //高度上的输出特征图缩小倍数
+		float scale_w = input_shape[1] / w; //宽度上的输出特征图缩小倍数
 		
 		//check output format
 		const int channel_per_box = channel / num_anchors;

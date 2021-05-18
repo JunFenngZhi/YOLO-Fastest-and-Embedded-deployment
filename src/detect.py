@@ -41,6 +41,8 @@ class YOLO_post_process:
     def decode_box(self, pred):
         all_bbox_rects = []
         for head, pred_head in enumerate(pred):
+            if device != 'cpu':
+                pred_head = pred_head.cpu()  # gpu推理先转为cpu
             pred_head = pred_head.numpy()[0]  # 转换为numpy
             in_w = pred_head.shape[2]
             in_h = pred_head.shape[1]
@@ -191,14 +193,14 @@ class Detect_YOLO():
 
 
 if __name__ == '__main__':
-    logger = config_logger(log_dir='E:\Graduate_Design\YOLO-Fastest\\test_result\\256x320',
-                              log_name='cpu-test.log', tensorboard=False)  # 加载日志模块
+    logger = config_logger(log_dir='D:\Graduate_Design\YOLO-Fastest\\test_result',
+                            log_name='cpu-test.log', tensorboard=False)  # 加载日志模块
 
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # 设备选择
-    detect = Detect_YOLO(device, model_path="E:\Graduate_Design\YOLO-Fastest\models\pytorch\\256x320\YOLO-Fastest_epoch_28.pth",
+    device = torch.device("cpu" if torch.cuda.is_available() else "cpu")  # 设备选择
+    detect = Detect_YOLO(device, model_path="D:\Graduate_Design\YOLO-Fastest\models\pytorch\\256x320\YOLO-Fastest_epoch_28.pth",
                          config_params=config_params, logger=logger)
-    detect.batch_detect(data_path="E:\Graduate_Design\YOLO-Fastest\\test_data",
-                        result_path="E:\Graduate_Design\YOLO-Fastest\\test_result\\256x320")
+    detect.batch_detect(data_path="D:\Graduate_Design\YOLO-Fastest\\test_data\\infra_red",
+                        result_path="D:\Graduate_Design\YOLO-Fastest\\test_result")
 
 
 

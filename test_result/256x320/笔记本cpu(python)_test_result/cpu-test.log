@@ -1,0 +1,21 @@
+2021-05-15 14:16:35,744！！image_name:Cloud_2m_4089.jpg -> detect finished, infer time:62.49ms, post_process time:0.00ms, total time:62.49ms
+2021-05-15 14:16:35,822！！image_name:Cloud_2m_4090.jpg -> detect finished, infer time:62.49ms, post_process time:0.00ms, total time:62.49ms
+2021-05-15 14:16:35,884！！image_name:Cloud_2m_4091.jpg -> detect finished, infer time:46.87ms, post_process time:15.62ms, total time:62.49ms
+2021-05-15 14:16:35,962！！image_name:Cloud_2m_4092.jpg -> detect finished, infer time:62.49ms, post_process time:0.00ms, total time:62.49ms
+2021-05-15 14:16:36,025！！image_name:Cloud_2m_4093.jpg -> detect finished, infer time:46.87ms, post_process time:0.00ms, total time:46.87ms
+2021-05-15 14:16:36,103！！image_name:Cloud_2m_4126.jpg -> detect finished, infer time:46.86ms, post_process time:15.62ms, total time:62.49ms
+2021-05-15 14:16:36,165！！image_name:Cloud_2m_4127.jpg -> detect finished, infer time:62.49ms, post_process time:0.00ms, total time:62.49ms
+2021-05-15 14:16:36,228！！image_name:Cloud_2m_4128.jpg -> detect finished, infer time:46.87ms, post_process time:0.00ms, total time:46.87ms
+2021-05-15 14:16:36,290！！image_name:Cloud_2m_4129.jpg -> detect finished, infer time:46.87ms, post_process time:0.00ms, total time:46.87ms
+2021-05-15 14:16:36,369！！image_name:Cloud_2m_4130.jpg -> detect finished, infer time:46.87ms, post_process time:0.00ms, total time:46.87ms
+2021-05-15 14:16:36,431！！image_name:noCloud_2m_4355.jpg -> detect finished, infer time:46.87ms, post_process time:0.00ms, total time:46.87ms
+2021-05-15 14:16:36,493！！image_name:noCloud_2m_4356.jpg -> detect finished, infer time:62.49ms, post_process time:0.00ms, total time:62.49ms
+2021-05-15 14:16:36,556！！image_name:noCloud_2m_4357.jpg -> detect finished, infer time:46.87ms, post_process time:0.00ms, total time:46.87ms
+2021-05-15 14:16:36,634！！image_name:noCloud_2m_4358.jpg -> detect finished, infer time:46.87ms, post_process time:15.62ms, total time:62.49ms
+2021-05-15 14:16:36,712！！image_name:noCloud_2m_4359.jpg -> detect finished, infer time:62.48ms, post_process time:15.62ms, total time:78.10ms
+2021-05-15 14:16:36,775！！image_name:noCloud_2m_4527.jpg -> detect finished, infer time:62.49ms, post_process time:0.00ms, total time:62.49ms
+2021-05-15 14:16:36,853！！image_name:noCloud_2m_4528.jpg -> detect finished, infer time:46.86ms, post_process time:0.00ms, total time:46.86ms
+2021-05-15 14:16:36,915！！image_name:noCloud_2m_4529.jpg -> detect finished, infer time:46.87ms, post_process time:0.00ms, total time:46.87ms
+2021-05-15 14:16:36,978！！image_name:noCloud_2m_4530.jpg -> detect finished, infer time:46.86ms, post_process time:15.62ms, total time:62.49ms
+2021-05-15 14:16:37,071！！image_name:noCloud_2m_4531.jpg -> detect finished, infer time:78.11ms, post_process time:0.00ms, total time:78.11ms
+2021-05-15 14:16:37,071！！detect avg_time: 57.80ms

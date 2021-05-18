@@ -32,7 +32,7 @@ public:
 	};
 
 public:
-	Detect_YOLO(const char* paramPath, const char* binPath, const vector<int>&img_size,
+	Detect_YOLO(const char* paramPath, const char* binPath, const vector<int>&input_shape,
 		int num_class, float conf_thres, float nms_thres, const vector<vector<float>>&anchors);
 	~Detect_YOLO();
 	void detect(const cv::Mat& ori_img, vector<BBoxRect>& all_bbox_rects, 
@@ -41,7 +41,7 @@ public:
 public:
 	ncnn::Net net;
 	vector<vector<float>>anchors;//每个头对应一行，每行排列为（w_1,h_1,w_2,h_2...）
-	vector<int> img_size; //(w,h,c)
+	vector<int> input_shape; //(行,列,通道数)
 	float conf_thres;
 	float nms_thres;
 	int num_anchors;

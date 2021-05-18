@@ -10,4 +10,4 @@ float sigmoid(float x);
 
 //»­³ö¼ì²â½á¹û
 void draw_box(cv::Mat& ori_img, const vector<Detect_YOLO::BBoxRect>& results, 
-	const vector<string>&class_name, const vector<cv::Scalar>& color);
+	const vector<string>&class_name, const vector<cv::Scalar>& color, const vector<int>& input_shape);
