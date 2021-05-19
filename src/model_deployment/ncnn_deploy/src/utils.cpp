@@ -62,7 +62,7 @@ void draw_box(cv::Mat& ori_img, const vector<Detect_YOLO::BBoxRect>& results,
 
 		//draw label
 		char text[64];
-		sprintf_s(text, "%s %.2f", class_name[it->label].c_str(), it->conf * it->cls_score);
+		sprintf(text, "%s %.2f", class_name[it->label].c_str(), it->conf * it->cls_score);
 		int baseLine = 0;
 		cv::Size label_size = cv::getTextSize(text, cv::FONT_HERSHEY_SIMPLEX, 0.5, 1, &baseLine);
 		cv::putText(ori_img, text, cv::Point(xmin, ymin - label_size.height + 4),

@@ -1,0 +1,22 @@
+toybrick@debian10:~/ncnn_project$ taskset -c 4,5 ./yolo_fastest
+image_name:Cloud_2m_4089.jpg -> no targets, infer time:52.65ms, post_process time:0.11ms, total time:52.76ms
+image_name:Cloud_2m_4090.jpg -> detect finished, infer time:48.72ms, post_process time:0.15ms, total time:48.86ms
+image_name:Cloud_2m_4091.jpg -> detect finished, infer time:47.32ms, post_process time:0.08ms, total time:47.40ms
+image_name:Cloud_2m_4092.jpg -> detect finished, infer time:46.89ms, post_process time:0.08ms, total time:46.98ms
+image_name:Cloud_2m_4093.jpg -> detect finished, infer time:57.12ms, post_process time:0.11ms, total time:57.23ms
+image_name:Cloud_2m_4126.jpg -> detect finished, infer time:63.62ms, post_process time:0.11ms, total time:63.73ms
+image_name:Cloud_2m_4127.jpg -> detect finished, infer time:47.50ms, post_process time:0.08ms, total time:47.59ms
+image_name:Cloud_2m_4128.jpg -> detect finished, infer time:62.44ms, post_process time:0.11ms, total time:62.56ms
+image_name:Cloud_2m_4129.jpg -> detect finished, infer time:48.03ms, post_process time:0.08ms, total time:48.11ms
+image_name:Cloud_2m_4130.jpg -> detect finished, infer time:51.22ms, post_process time:0.08ms, total time:51.30ms
+image_name:noCloud_2m_4355.jpg -> detect finished, infer time:51.31ms, post_process time:0.08ms, total time:51.40ms
+image_name:noCloud_2m_4356.jpg -> detect finished, infer time:48.64ms, post_process time:0.09ms, total time:48.73ms
+image_name:noCloud_2m_4357.jpg -> detect finished, infer time:54.04ms, post_process time:0.11ms, total time:54.16ms
+image_name:noCloud_2m_4358.jpg -> detect finished, infer time:71.94ms, post_process time:0.09ms, total time:72.04ms
+image_name:noCloud_2m_4359.jpg -> detect finished, infer time:52.79ms, post_process time:0.09ms, total time:52.88ms
+image_name:noCloud_2m_4527.jpg -> detect finished, infer time:50.12ms, post_process time:0.09ms, total time:50.21ms
+image_name:noCloud_2m_4528.jpg -> detect finished, infer time:49.74ms, post_process time:0.09ms, total time:49.83ms
+image_name:noCloud_2m_4529.jpg -> detect finished, infer time:49.88ms, post_process time:0.08ms, total time:49.96ms
+image_name:noCloud_2m_4530.jpg -> detect finished, infer time:51.89ms, post_process time:0.08ms, total time:51.97ms
+image_name:noCloud_2m_4531.jpg -> detect finished, infer time:52.30ms, post_process time:0.08ms, total time:52.39ms
+avg_time:53.00ms

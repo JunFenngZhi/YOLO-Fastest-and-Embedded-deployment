@@ -7,10 +7,10 @@
 int main()
 {
     //路径参数
-	string resultPath = "D:\\Graduate_Design\\YOLO-Fastest\\test_result";
-	string dataPath = "D:\\Graduate_Design\\YOLO-Fastest\\test_data\\infra_red";
-	string param_path = "D:\\Graduate_Design\\YOLO-Fastest\\models\\ncnn\\256x320\\YOLO-Fastest_epoch_28-opt.param";
-	string bin_path = "D:\\Graduate_Design\\YOLO-Fastest\\models\\ncnn\\256x320\\YOLO-Fastest_epoch_28-opt.bin";
+	string resultPath = "/home/toybrick/ncnn_project/test_result";
+	string dataPath = "/home/toybrick/ncnn_project/test_data";
+	string param_path = "/home/toybrick/ncnn_project/model/YOLO-Fastest_epoch_28-opt.param";
+	string bin_path = "/home/toybrick/ncnn_project/model/YOLO-Fastest_epoch_28-opt.bin";
 
 	//YOLO检测参数
 	vector<string>class_name = { "carrier", "defender", "destroyer" };
@@ -30,7 +30,7 @@ int main()
 	for (int i = 0; i < file_path.size(); i++) 
 	{
 		//路径分割
-		size_t found = file_path[i].find_last_of("\\"); 
+		size_t found = file_path[i].find_last_of("/"); 
 		cv::String path = file_path[i].substr(0, found);
 		cv::String file_name = file_path[i].substr(found + 1);
 
@@ -51,7 +51,7 @@ int main()
 			printf("image_name:%s -> detect finished, infer time:%.2fms, post_process time:%.2fms, total time:%.2fms\n", file_name.c_str(), infer_time,
 				post_process_time, infer_time + post_process_time);
 		}
-		//cv::imwrite(resultPath + "\\result_" + file_name, img);
+		cv::imwrite(resultPath + "//result_" + file_name, img);
 
 	}
 	printf("avg_time:%.2fms\n", avg_time / num);
