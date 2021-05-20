@@ -18,19 +18,15 @@ get_target是根据target和anchor_boxes的IOU值来初步筛选，哪些anchor_
 Detect:
 1、使用loss类计算预测检验框的过程中，一些变量的shape不明确.√
 2、为什么_sacle要乘2？√
-3、scale_coords函数有bug
 
-general   Non_maxium supression()
-1、  max_detections = torch.cat(max_detections).data  这行作用是什么？
 
 train:
 1、学习率调整的原理是什么？
 
-改进：
-      1、应该在最前面屏蔽其它GPU,只保留要用那个。这样可以直接cuda,不同传递device参数
+待改进：
+      1、在代码最前面屏蔽其它GPU,只保留要用那个。这样可以直接cuda,不同传递device参数
       2、进行图片预处理，增强对比度。突出船只目标
       3、通过聚类学习得到专用的anchor_box
       4、降低图像分辨率
       5、根据图片先验知识，确定目标大小及尺度。调整网络结构，去掉无用的头。
       6、模型量化，加速
-      7、后处理用C++重写，python的太慢

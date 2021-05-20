@@ -5,9 +5,9 @@ import os
 import time
 import torch
 import math
-from model_training.model.yolo_fastest import YoloFastest
-from model_training._config import config_params
-from model_training.utils.general import plot_one_box
+from yolo_fastest import YoloFastest
+from _config import config_params
+from general import plot_one_box
 
 
 # 将pytorch参数模型导出，保存为torchscript格式
@@ -112,7 +112,7 @@ class YOLO_post_process:
     def decode_box(self, pred):
         all_bbox_rects = []
         for head, pred_head in enumerate(pred):
-            # pred_head = pred_head.numpy()[0]  # 转换为numpy
+            pred_head = pred_head[0]
             in_w = pred_head.shape[2]
             in_h = pred_head.shape[1]
             scale_h = self.input_shape[0]/in_h   # 高度上的输出特征图缩小倍数(相对于网络输入图片坐标系而言)
@@ -157,10 +157,10 @@ class YOLO_post_process:
 
 
 if __name__ == '__main__':
-    pytorch_model_path = '/home/toybrick/RKNN_project/pytorch_model/YOLO-Fastest_epoch_29.pth'
-    rknn_model_path = '/home/toybrick/RKNN_project/RKNN_model/YOLO-Fastest_epoch_29.rknn'
+    pytorch_model_path = '/home/toybrick/RKNN_project/pytorch_model/256x320/YOLO-Fastest_epoch_28.pth'
+    rknn_model_path = '/home/toybrick/RKNN_project/RKNN_model/256x320/YOLO-Fastest_epoch_28.rknn'
     data_path = '/home/toybrick/RKNN_project/test_data'
-    result_path = '/home/toybrick/RKNN_project/test_result'
+    result_path = '/home/toybrick/RKNN_project/test_result/256x320'
 
     input_shape = config_params["io_params"]["input_shape"]
     origin_img_shape = config_params["io_params"]["origin_img_shape"]
@@ -201,6 +201,7 @@ if __name__ == '__main__':
     num = len(img_list)
     for file_name in img_list:
         img_path = os.path.join(data_path, file_name)  # 每张图片的路径
+        print(img_path)
         img, ori_img = pre_process(img_path=img_path, input_shape=input_shape, origin_img_shape=origin_img_shape)
 
         # 网络推理
@@ -238,7 +239,8 @@ if __name__ == '__main__':
 
         # 坐标调整
         if input_shape[0:2] != origin_img_shape[0:2]:  # bbox坐标调整，从网络输入图片坐标系调整到实际图片坐标系
-            adjust_coord(input_shape, origin_img_shape, all_bbox_rects)
+            print("adjust")
+            adjust_coord(origin_img_shape, input_shape, all_bbox_rects)
 
         # 画框
         for *xyxy, conf, cls_score, cls_pred in all_bbox_rects:

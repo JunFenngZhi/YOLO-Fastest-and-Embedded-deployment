@@ -1,0 +1,75 @@
+toybrick@debian10:~/RKNN_project$ python3 rknn_deploy.py
+--> Config rknn
+---> Model is already transfered into rknn format
+--> Loading rknn model
+--> Init runtime environment
+
+I NPUTransfer: Starting NPU Transfer Client, Transfer version 2.0.0 (8f9ebbc@2020-04-03T09:12:43)
+D RKNNAPI: ==============================================
+D RKNNAPI: RKNN VERSION:
+D RKNNAPI:   API: 1.4.0 (b4a8096 build: 2020-08-12 10:16:10)
+D RKNNAPI:   DRV: 1.6.0 (159d2d3 build: 2021-01-12 15:23:09)
+D RKNNAPI: ==============================================
+--> Begin...
+
+/home/toybrick/RKNN_project/test_data/Cloud_2m_4127.jpg
+adjust
+image_name:Cloud_2m_4127.jpg -> detect finished, infer time:37.31ms, post_process time:8.52ms, total time:45.83ms
+/home/toybrick/RKNN_project/test_data/noCloud_2m_4530.jpg
+adjust
+image_name:noCloud_2m_4530.jpg -> detect finished, infer time:37.12ms, post_process time:7.13ms, total time:44.25ms
+/home/toybrick/RKNN_project/test_data/Cloud_2m_4092.jpg
+adjust
+image_name:Cloud_2m_4092.jpg -> detect finished, infer time:36.02ms, post_process time:7.10ms, total time:43.12ms
+/home/toybrick/RKNN_project/test_data/noCloud_2m_4529.jpg
+adjust
+image_name:noCloud_2m_4529.jpg -> detect finished, infer time:38.16ms, post_process time:6.78ms, total time:44.94ms
+/home/toybrick/RKNN_project/test_data/noCloud_2m_4357.jpg
+adjust
+image_name:noCloud_2m_4357.jpg -> detect finished, infer time:35.59ms, post_process time:6.81ms, total time:42.40ms
+/home/toybrick/RKNN_project/test_data/noCloud_2m_4528.jpg
+adjust
+image_name:noCloud_2m_4528.jpg -> detect finished, infer time:37.98ms, post_process time:6.62ms, total time:44.60ms
+/home/toybrick/RKNN_project/test_data/Cloud_2m_4093.jpg
+adjust
+image_name:Cloud_2m_4093.jpg -> detect finished, infer time:35.82ms, post_process time:6.87ms, total time:42.69ms
+/home/toybrick/RKNN_project/test_data/Cloud_2m_4126.jpg
+adjust
+image_name:Cloud_2m_4126.jpg -> detect finished, infer time:37.45ms, post_process time:6.73ms, total time:44.18ms
+/home/toybrick/RKNN_project/test_data/Cloud_2m_4091.jpg
+adjust
+image_name:Cloud_2m_4091.jpg -> detect finished, infer time:38.11ms, post_process time:6.44ms, total time:44.56ms
+/home/toybrick/RKNN_project/test_data/noCloud_2m_4356.jpg
+adjust
+image_name:noCloud_2m_4356.jpg -> detect finished, infer time:37.72ms, post_process time:6.81ms, total time:44.53ms
+/home/toybrick/RKNN_project/test_data/noCloud_2m_4359.jpg
+adjust
+image_name:noCloud_2m_4359.jpg -> detect finished, infer time:35.37ms, post_process time:6.71ms, total time:42.08ms
+/home/toybrick/RKNN_project/test_data/Cloud_2m_4089.jpg
+adjust
+image_name:Cloud_2m_4089.jpg -> detect finished, infer time:37.54ms, post_process time:7.06ms, total time:44.59ms
+/home/toybrick/RKNN_project/test_data/noCloud_2m_4531.jpg
+adjust
+image_name:noCloud_2m_4531.jpg -> detect finished, infer time:36.43ms, post_process time:6.85ms, total time:43.29ms
+/home/toybrick/RKNN_project/test_data/Cloud_2m_4129.jpg
+adjust
+image_name:Cloud_2m_4129.jpg -> detect finished, infer time:35.61ms, post_process time:6.55ms, total time:42.15ms
+/home/toybrick/RKNN_project/test_data/noCloud_2m_4358.jpg
+adjust
+image_name:noCloud_2m_4358.jpg -> detect finished, infer time:35.82ms, post_process time:6.42ms, total time:42.24ms
+/home/toybrick/RKNN_project/test_data/noCloud_2m_4355.jpg
+adjust
+image_name:noCloud_2m_4355.jpg -> detect finished, infer time:36.09ms, post_process time:6.59ms, total time:42.68ms
+/home/toybrick/RKNN_project/test_data/noCloud_2m_4527.jpg
+adjust
+image_name:noCloud_2m_4527.jpg -> detect finished, infer time:37.08ms, post_process time:6.96ms, total time:44.04ms
+/home/toybrick/RKNN_project/test_data/Cloud_2m_4130.jpg
+adjust
+image_name:Cloud_2m_4130.jpg -> detect finished, infer time:35.73ms, post_process time:7.07ms, total time:42.80ms
+/home/toybrick/RKNN_project/test_data/Cloud_2m_4090.jpg
+adjust
+image_name:Cloud_2m_4090.jpg -> detect finished, infer time:36.58ms, post_process time:6.80ms, total time:43.38ms
+/home/toybrick/RKNN_project/test_data/Cloud_2m_4128.jpg
+adjust
+image_name:Cloud_2m_4128.jpg -> detect finished, infer time:36.00ms, post_process time:6.81ms, total time:42.80ms
+avg_time:43.56ms

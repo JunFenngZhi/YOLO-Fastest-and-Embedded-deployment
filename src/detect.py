@@ -196,10 +196,10 @@ if __name__ == '__main__':
     logger = config_logger(log_dir='D:\Graduate_Design\YOLO-Fastest\\test_result',
                             log_name='cpu-test.log', tensorboard=False)  # 加载日志模块
 
-    device = torch.device("cpu" if torch.cuda.is_available() else "cpu")  # 设备选择
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # 设备选择
     detect = Detect_YOLO(device, model_path="D:\Graduate_Design\YOLO-Fastest\models\pytorch\\256x320\YOLO-Fastest_epoch_28.pth",
                          config_params=config_params, logger=logger)
-    detect.batch_detect(data_path="D:\Graduate_Design\YOLO-Fastest\\test_data\\infra_red",
+    detect.batch_detect(data_path="D:\Graduate_Design\YOLO-Fastest\\test_data",
                         result_path="D:\Graduate_Design\YOLO-Fastest\\test_result")
 
 

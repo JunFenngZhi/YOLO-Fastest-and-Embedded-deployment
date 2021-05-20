@@ -10,7 +10,7 @@ config_params = {
             "input_channel": 1,
             "input_shape": [256, 320, 1],  # 网络的输入图像尺寸(行和列必须为32的倍数)  【行，列，通道数】 网络在输入图坐标系预测目标，最后再把结果恢复到原始图坐标系下
             "origin_img_shape": [512, 640, 3],  # 数据集中原始输入图片尺寸  【行，列，通道数】
-            "input_tensor_shape": (1, 1, 512, 640),
+            "input_tensor_shape": (1, 1, 256,320),
             "num_cls": 3,  # 类别数
             "num_anchors": 3,
             "anchor_mask": [[0, 1, 2], [3, 4, 5]],
