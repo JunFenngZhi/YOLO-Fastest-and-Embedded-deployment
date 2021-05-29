@@ -1,6 +1,6 @@
 # YOLO-Fastest & Embedded deployment
 ## Introduction
-*   YOLO-Fastest 是现在已知开源最快的最轻量的改进版yolo通用目标检测算法。它基于yolov3，具有轻量化、简单易移植、推理快等特点。其设计初衷是为了打破算力的瓶颈，能在更多的低成本的边缘端设备实时运行目标检测算法。YOLO-Fastest原版是基于darknet框架训练的，对新手而言较难安装使用。本项目优化了原有的pytorch版YOLO-Fastest并加以改进，更方便大家训练部署自己的网络。   
+*   YOLO-Fastest 是现在已知开源最快的最轻量的改进版yolo通用目标检测算法。它基于yolov3，具有轻量化、简单易移植、推理快等特点。其设计初衷是为了打破算力的瓶颈，能在更多的低成本的边缘端设备实时运行目标检测算法。YOLO-Fastest原版是基于darknet框架训练的，对新手而言较难安装使用。本项目优化了原有的pytorch版YOLO-Fastest并加以改进，更大家训练部署自己的网络。   
  
 *   本项目使用两种方法将YOLO-Fastest部署到嵌入式设备上，并对比了这两种部署方法的性能。  
 1、 基于ncnn推理框架部署。ncnn是一个为嵌入式端极致优化的高性能神经网络前向计算框架。因为本项目使用的是pytorch版本下的模型，转换模型格式后无法直接使用ncnn中自带的yolo后处理层(yolov3detectionoutput),所以本项目参照ncnn源码自行实现了yolo后处理。  
